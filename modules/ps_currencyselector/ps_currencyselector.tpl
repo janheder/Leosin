@@ -23,15 +23,17 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 
-<div class="m-navCurrency">
-  <div class="dropdown js-dropdown m-navCurrency__selector">
-    <button data-target="#" data-toggle="dropdown" class="m-navCurrency__button" aria-haspopup="true" aria-expanded="false" aria-label="{l s='Currency dropdown' d='Shop.Theme.Global'}">
-      {$current_currency.iso_code} {$current_currency.sign}
+<div class="navCurrency">
+  <div class="dropdown js-dropdown navCurrency__selector">
+    
+    <button data-target="#" data-toggle="dropdown" class="navCurrency__button" aria-haspopup="true" aria-expanded="false" aria-label="{l s='Currency dropdown' d='Shop.Theme.Global'}">
+      <img src="{$urls.img_url}icons/currency-white.svg" class="navCurrency__icon">
+      <span class="navCurrency__title">{$current_currency.iso_code} {$current_currency.sign}</span>
     </button>
-    <ul class="dropdown-menu hidden-sm-down m-navCurrency__dropdown" aria-labelledby="currency-selector-label">
+    <ul class="dropdown-menu hidden-sm-down navCurrency__dropdown" aria-labelledby="currency-selector-label">
       {foreach from=$currencies item=currency}
-        <li {if $currency.current} class="current m-navCurrency__currencyItem -active" {else} class="m-navCurrency__currencyItem" {/if}>
-          <a title="{$currency.name}" rel="nofollow" href="{$currency.url}" class="m-navCurrency__currencyLink">{$currency.iso_code} {$currency.sign}</a>
+        <li {if $currency.current} class="current navCurrency__currencyItem -active" {else} class="navCurrency__currencyItem" {/if}>
+          <a title="{$currency.name}" rel="nofollow" href="{$currency.url}" class="navCurrency__currencyLink">{$currency.iso_code} {$currency.sign}</a>
         </li>
       {/foreach}
     </ul>

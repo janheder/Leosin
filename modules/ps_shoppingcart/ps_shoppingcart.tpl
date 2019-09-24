@@ -22,14 +22,14 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="m-navCart">
-  <div class="blockcart cart-preview m-navCart__preview {if $cart.products_count > 0}active{else}inactive{/if}" data-refresh-url="{$refresh_url}">
+<div class="navCart">
+  <div class="blockcart cart-preview navCart__preview {if $cart.products_count > 0}active{else}inactive{/if}" data-refresh-url="{$refresh_url}">
 
     {if $cart.products_count > 0}
-      <a href="{$cart_url}" class="m-navCart__link" rel="nofollow">
+      <a href="{$cart_url}" class="navCart__link" rel="nofollow">
     {/if}
-      <span class="m-navCart__icon a-icon__cart -white"></span>
-      <span class="m-navCart__title">{l s='Cart' d='Shop.Theme.Checkout'} ({$cart.products_count})</span>
+      <img src="{$urls.img_url}icons/cart-white.svg" class="navCart__icon">
+      <span class="navCart__title">{l s='Cart' d='Shop.Theme.Checkout'} ({$cart.products_count})</span>
     {if $cart.products_count > 0}
       </a>
     {/if}

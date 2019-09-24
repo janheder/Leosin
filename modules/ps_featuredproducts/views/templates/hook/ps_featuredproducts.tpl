@@ -25,7 +25,7 @@
 <section class="o-featuredProducts">
   <div class="container o-featuredProducts__container">
     <h1 class="a-featuredProducts__Title">{l s='Popular Products' d='Shop.Theme.Catalog'}</h1>
-    <div class="o-productGrid o-featuredProducts__grid">
+    <div class="productGrid o-featuredProducts__grid">
       {foreach from=$products item="product"}
         {include file="catalog/_partials/miniatures/product.tpl" product=$product}
       {/foreach}

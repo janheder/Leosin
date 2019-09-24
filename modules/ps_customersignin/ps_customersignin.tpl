@@ -22,11 +22,11 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="m-navUser">
+<div class="navUser">
 
   {if $logged}
 
-    <a class="m-navUser__link" href="{$logout_url}" rel="nofollow">
+    <a class="navUser__link" href="{$logout_url}" rel="nofollow">
       {l s='Sign out' d='Shop.Theme.Actions'}
     </a>
 
@@ -36,9 +36,9 @@
 
   {else}
 
-    <a href="{$my_account_url}" class="m-navUser__link" title="{l s='Log in to your customer account' d='Shop.Theme.Customeraccount'}" rel="nofollow">
-      <span class="m-navUser__icon a-icon__user"></span>
-      <span class="m-navUser__title">{l s='Sign in' d='Shop.Theme.Actions'}</span>
+    <a href="{$my_account_url}" class="navUser__link" title="{l s='Log in to your customer account' d='Shop.Theme.Customeraccount'}" rel="nofollow">
+      <img src="{$urls.img_url}icons/user-white.svg" class="navUser__icon">
+      <span class="navUser__title">{l s='Sign in' d='Shop.Theme.Actions'}</span>
     </a>
 
   {/if}

@@ -29,21 +29,23 @@
 {/block}
 
 
-<nav class="o-navbarMain">
-  {block name='header_logo'}
-    <a class="m-logoWrap" href="{$urls.base_url}" title="{$shop.name}">
-      <img src="{$shop.logo}" class="m-logoImg" alt="{$shop.name}">
-    </a>
-  {/block}
+<nav class="navbarMain">
+  <div class="container navbarMain__container">
+    {block name='header_logo'}
+      <a class="logoWrap" href="{$urls.base_url}" title="{$shop.name}">
+        <img src="{$shop.logo}" class="logoImg" alt="{$shop.name}">
+      </a>
+    {/block}
 
-  {block name='header_nav'}
-      {hook h='displayNav'}
-  {/block}
+    {block name='header_nav'}
+        {hook h='displayNav'}
+    {/block}
+  </div>
 </nav>
 
 
 {block name='header_top'}
-  <nav class="o-navbarCategory">
+  <nav class="navbarCategory">
     {hook h='displayTop'}
   </nav>
 

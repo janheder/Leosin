@@ -1,24 +1,24 @@
 {block name='product_miniature_item'}
-  <article class="m-itemProduct" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}" itemscope itemtype="http://schema.org/Product">
+  <article class="itemProduct" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}" itemscope itemtype="http://schema.org/Product">
 
-    <div class="m-itemProduct__inner">
+    <div class="itemProduct__inner">
 
-      <div class="m-itemProduct__top">
+      <div class="itemProduct__top">
 
-        <a href="{$product.url}" class="m-itemProduct__thumbnail">
+        <a href="{$product.url}" class="itemProduct__thumbnail">
           {block name='product_thumbnail'}
-            <div class="m-itemProduct__imgContainer">
-              <div class="m-itemProduct__imgWrap">
-                <img src="{$product.cover.medium.url}" data-src="{$product.cover.medium.url}" class="lazy m-itemProduct__img" alt="{$product.cover.legend}" data-full-size-image-url ="{$product.cover.large.url}">
+            <div class="itemProduct__imgContainer">
+              <div class="itemProduct__imgWrap">
+                <img src="{$product.cover.medium.url}" data-src="{$product.cover.medium.url}" class="lazy itemProduct__img" alt="{$product.cover.legend}" data-full-size-image-url ="{$product.cover.large.url}">
                 {if $product.discount_type === 'percentage'}
-                  <span class="a-itemProduct__tag -sale">{$product.discount_percentage}</span>
+                  <span class="itemProduct__tag -sale">{$product.discount_percentage}</span>
                 {/if}
               </div>
             </div>
           {/block}
 
           {block name='product_name'}
-            <h1 class="m-itemProduct__title" itemprop="name">{$product.name}</h1>
+            <h1 class="itemProduct__title" itemprop="name">{$product.name}</h1>
           {/block}
         </a>
         
@@ -27,29 +27,29 @@
 
 
 
-      <div class="m-itemProduct__bottom">
+      <div class="itemProduct__bottom">
 
         {block name='product_description_short'}
-          <div class="m-itemProduct__description" itemprop="description">{$product.description_short nofilter}</div>
+          <div class="itemProduct__description" itemprop="description">{$product.description_short nofilter}</div>
         {/block}
 
         {block name='product_price_and_shipping'}
           {if $product.show_price}
-            <div class="m-itemProduct__priceWrap">
+            <div class="itemProduct__priceWrap">
               {if $product.has_discount}
                 {hook h='displayProductPriceBlock' product=$product type="old_price"}
 
-                <span class="m-itemProduct__priceOld">{$product.regular_price}</span>
+                <span class="itemProduct__priceOld">{$product.regular_price}</span>
                 {if $product.discount_type === 'percentage'}
-                  <span class="m-itemProduct__pricePercentage">{$product.discount_percentage}</span>
+                  <span class="itemProduct__pricePercentage">{$product.discount_percentage}</span>
                 {elseif $product.discount_type === 'amount'}
-                  <span class="m-itemProduct__priceNumber">{$product.discount_amount_to_display}</span>
+                  <span class="itemProduct__priceNumber">{$product.discount_amount_to_display}</span>
                 {/if}
               {/if}
 
               {hook h='displayProductPriceBlock' product=$product type="before_price"}
 
-              <span itemprop="price" class="m-itemProduct__price">{$product.price}</span>
+              <span itemprop="price" class="itemProduct__price">{$product.price}</span>
 
               {hook h='displayProductPriceBlock' product=$product type="unit_price"}
 
@@ -59,10 +59,10 @@
         {/block}
 
         {block name='product_list_actions'}
-          <div class="m-itemProduct__cta">
+          <div class="itemProduct__cta">
             {if $product.add_to_cart_url}
                 <a
-                  class = "btn m-itemProduct__addToCart"
+                  class = "btn itemProduct__addToCart"
                   href  = "{$product.add_to_cart_url}"
                   rel   = "nofollow"
                   data-id-product="{$product.id_product}"

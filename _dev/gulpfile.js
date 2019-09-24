@@ -9,13 +9,14 @@ var uglify = require('gulp-uglify');
 var pump = require('pump');
 var concat = require('gulp-concat');
 var autoprefixer= require('autoprefixer');
-
+var sassGlob = require('gulp-sass-glob');
 
 // COMPILE SASS
 gulp.task('sass', function () {
   var processors = [ autoprefixer()];
   return gulp.src('./scss/**/*.scss')
     .pipe(sourcemaps.init())
+    .pipe(sassGlob()) 
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(concat('style.min.css'))
     .pipe(postcss(processors))

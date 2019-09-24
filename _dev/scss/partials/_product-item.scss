@@ -1,9 +1,9 @@
-.m-itemProduct{
+.itemProduct{
   padding: 10px;
   z-index: 2;
   position: relative;
 }
-.m-itemProduct__inner{
+.itemProduct__inner{
   background: $bg-light;
   padding: 10px;
   display: flex;
@@ -11,13 +11,13 @@
   justify-content: space-between;
   height: 100%;
 }
-.m-itemProduct__top{
+.itemProduct__top{
   position: relative;
 }
-.m-itemProduct__thumbnail{
+.itemProduct__thumbnail{
   display: block;
 }
-.a-itemProduct__tag{
+.itemProduct__tag{
   background: transparent;
   color: $text-white;
   position: absolute;
@@ -58,11 +58,11 @@
     /*background: $bg-red;*/
   }
 }
-.m-itemProduct__imgContainer{
+.itemProduct__imgContainer{
   position: relative;
   padding-bottom: 100%;
 }
-.m-itemProduct__imgWrap{
+.itemProduct__imgWrap{
   position: absolute;
   top: 0;
   left: 0;
@@ -72,14 +72,14 @@
   justify-content: center;
   align-items: center;
 }
-.m-itemProduct__img{
+.itemProduct__img{
   max-width: 100%;
   max-height: 100%;
 }
-.m-itemProduct__title{
+.itemProduct__title{
   font-size: 1.8rem;
 }
 
-.m-itemProduct__bottom{
+.itemProduct__bottom{
 
 }

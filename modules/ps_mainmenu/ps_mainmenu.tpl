@@ -1,8 +1,8 @@
 {assign var=_counter value=0}
 
 {function name="menu" nodes=[] depth=0 parent=null}
-      <div class="container o-navbarCategory__container">
-        <div class="collapse navbar-collapse o-navbarCategory__collapse">
+      <div class="container navbarCategory__container">
+        <div class="collapse navbar-collapse navbarCategory__collapse">
 
     {if $nodes|count}
 

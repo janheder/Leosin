@@ -26,6 +26,7 @@
   "dependencies": {
     "@types/jquery": "^3.3.6",
     "@types/siema": "^1.4.2",
+    "gulp-sass-glob": "^1.1.0",
     "gulp-typescript": "^5.0.0-alpha.3",
     "natives": "^1.1.6",
     "npm": "^6.2.0",

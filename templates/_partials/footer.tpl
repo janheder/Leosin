@@ -40,7 +40,7 @@
 
 <section class="copyright">
   <div class="container">
-    {block name='copyright_link'}
+    {block name='copyright__link'}
       {l s='Copyright'} © {$smarty.now|date_format:"%Y"}
       <a href="{$urls.base_url}">{$shop.name}</a>
     {/block}
