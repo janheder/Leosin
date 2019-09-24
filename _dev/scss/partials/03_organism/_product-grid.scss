@@ -1,0 +1,21 @@
+.o-productGrid{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 992px){
+  .m-itemProduct {
+    flex: 0 0 25%;
+  }
+}
+@media screen and (max-width: 768px){
+  .m-itemProduct {
+    flex: 0 0 33.3333%;
+  }
+}
+@media screen and (max-width: 500px){
+  .m-itemProduct {
+    flex: 0 0 50%;
+  }
+}

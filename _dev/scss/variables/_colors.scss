@@ -1,0 +1,182 @@
+/* ========================================================================== */
+/* Descriptive Colors */
+/* ========================================================================== */
+
+$white: #FFFFFF;
+$light-grey: #F5F5F5;
+$medium-grey: #4E5055;
+$border-grey: #E5E5E5;
+$text-grey: #ABADAD;
+$dark-grey: #2D3234;
+$darkest-grey: #292E30;
+$black: #000000;
+
+$orange-main: #FA4C29;
+$orange-main-dark: #F92F06;
+$red-main: #E30613;
+$red-main-dark: #D40612;
+$brown: #43312E;
+$red: #E30016;
+$green-main: #0A9100;
+$yellow-main: #E9A400;
+$blue-main: #2161AD;
+$blue-main-dark: #1B4E8B;
+$blue-alt: #3996D2;
+$blue-alt-2: #219BAD;
+
+$black-transparent: rgba(0,0,0,0.1);
+$black-transparent-25: rgba(0,0,0,0.25);
+$black-transparent-50: rgba(0,0,0,0.5);
+
+$white-transparent: rgba(255,255,255,0.1);
+$white-transparent-90: rgba(255,255,255,0.9);
+
+/* ========================================================================== */
+/* Variables */
+/* ========================================================================== */
+
+// Border radius
+$border-radius: 3px;
+$border-radius--round: 50%;
+
+// Border color
+$border-primary: $border-grey;
+$border-dark: $dark-grey;
+$border-white: $white;
+$border-red: $red-main;
+$border-blue: $blue-main;
+
+// Brand colors
+$brand-primary: $red-main;
+$brand-primary--dark: $red-main-dark;
+$brand-secondary: $red-main;
+
+// Text colors
+$text-primary: $dark-grey;
+$text-medium: $medium-grey;
+$text-light: $text-grey;
+$text-white: $white;
+$text-red: $red-main;
+
+// Backgorund colors
+$bg-brand: $red-main;
+$bg-brand--dark: $red-main-dark;
+$bg-white: $white;
+$bg-light: $light-grey;
+$bg-medium: $medium-grey;
+$bg-grey: $border-grey;
+$bg-dark: $dark-grey;
+$bg-darker: $darkest-grey;
+$bg-black: $black;
+$bg-red: $red-main;
+$bg-green: $green-main;
+$bg-blue: $blue-main;
+$bg-blue-alt: $blue-alt;
+$bg-blue-alt-2: $blue-alt-2;
+$bg-blue-dark: $blue-main-dark;
+
+
+$transparent: transparent;
+
+$black: #000000;
+$white: #FFFFFF;
+
+$gray-100: #F7FAFC;
+$gray-200: #EDF2F7;
+$gray-300: #E2E8F0;
+$gray-400: #CBD5E0;
+$gray-500: #A0AEC0;
+$gray-600: #718096;
+$gray-700: #4A5568;
+$gray-800: #2D3748;
+$gray-900: #1A202C;
+
+$red-100: #FFF5F5;
+$red-200: #FED7D7;
+$red-300: #FEB2B2;
+$red-400: #FC8181;
+$red-500: #F56565;
+$red-600: #E53E3E;
+$red-700: #C53030;
+$red-800: #9B2C2C;
+$red-900: #742A2A;
+
+$orange-100: #FFFAF0;
+$orange-200: #FEEBC8;
+$orange-300: #FBD38D;
+$orange-400: #F6AD55;
+$orange-500: #ED8936;
+$orange-600: #DD6B20;
+$orange-700: #C05621;
+$orange-800: #9C4221;
+$orange-900: #7B341E;
+
+$yellow-100: #FFFFF0;
+$yellow-200: #FEFCBF;
+$yellow-300: #FAF089;
+$yellow-400: #F6E05E;
+$yellow-500: #ECC94B;
+$yellow-600: #D69E2E;
+$yellow-700: #B7791F;
+$yellow-800: #975A16;
+$yellow-900: #744210;
+
+$green-100: #F0FFF4;
+$green-200: #C6F6D5;
+$green-300: #9AE6B4;
+$green-400: #68D391;
+$green-500: #48BB78;
+$green-600: #38A169;
+$green-700: #2F855A;
+$green-800: #276749;
+$green-900: #22543D;
+
+$teal-100: #E6FFFA;
+$teal-200: #B2F5EA;
+$teal-300: #81E6D9;
+$teal-400: #4FD1C5;
+$teal-500: #38B2AC;
+$teal-600: #319795;
+$teal-700: #2C7A7B;
+$teal-800: #285E61;
+$teal-900: #234E52;
+
+$blue-100: #EBF8FF;
+$blue-200: #BEE3F8;
+$blue-300: #90CDF4;
+$blue-400: #63B3ED;
+$blue-500: #4299E1;
+$blue-600: #3182CE;
+$blue-700: #2B6CB0;
+$blue-800: #2C5282;
+$blue-900: #2A4365;
+
+$indigo-100: #EBF4FF;
+$indigo-200: #C3DAFE;
+$indigo-300: #A3BFFA;
+$indigo-400: #7F9CF5;
+$indigo-500: #667EEA;
+$indigo-600: #5A67D8;
+$indigo-700: #4C51BF;
+$indigo-800: #434190;
+$indigo-900: #3C366B;
+
+$purple-100: #FAF5FF;
+$purple-200: #E9D8FD;
+$purple-300: #D6BCFA;
+$purple-400: #B794F4;
+$purple-500: #9F7AEA;
+$purple-600: #805AD5;
+$purple-700: #6B46C1;
+$purple-800: #553C9A;
+$purple-900: #44337A;
+
+$pink-100: #FFF5F7;
+$pink-200: #FED7E2;
+$pink-300: #FBB6CE;
+$pink-400: #F687B3;
+$pink-500: #ED64A6;
+$pink-600: #D53F8C;
+$pink-700: #B83280;
+$pink-800: #97266D;
+$pink-900: #702459;
