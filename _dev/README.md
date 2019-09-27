@@ -1,1 +1,1 @@
-# best-lekarna.cz
+# Leosin theme

@@ -25,23 +25,23 @@
 
 {if $homeslider.slides}
 
-  <section class="o-hero">
-    <div class="container o-hero__container">
-      <div class="o-hero__swiper" id="hero_swiper" data-interval="{$homeslider.speed}">
-        <div class="o-hero__swiperContent">
-          <div class="swiper-wrapper o-hero__swiperWrapper">
+  <section class="hero">
+    <div class="container hero__container">
+      <div class="hero__swiper" id="hero_swiper" data-interval="{$homeslider.speed}">
+        <div class="hero__swiperContent">
+          <div class="swiper-wrapper hero__swiperWrapper">
 
             {foreach from=$homeslider.slides item=slide name='homeslider'}
               {assign var="counter" value=$counter + 1}
-              <div class="swiper-slide o-hero__slide" data-slide={$counter}>
-                <a href="{$slide.url}" class="o-hero__slideLink">
-                  <figure class="o-hero__slideFigure">
-                    <img data-src="{$slide.image_url}" class="swiper-lazy o-hero__slideImg" alt="{$slide.legend|escape}" >
-                    <div class="swiper-lazy-preloader o-hero__slidePreloader -light"></div>
+              <div class="swiper-slide hero__slide" data-slide={$counter}>
+                <a href="{$slide.url}" class="hero__slideLink">
+                  <figure class="hero__slideFigure">
+                    <img data-src="{$slide.image_url}" class="swiper-lazy hero__slideImg" alt="{$slide.legend|escape}" >
+                    <div class="swiper-lazy-preloader hero__slidePreloader -light"></div>
                     {if $slide.title || $slide.description}
-                      <figcaption class="o-hero__slideCaption">
-                        <h2 class="o-hero__slideTitle">{$slide.title}</h2>
-                        <div class="o-hero__slideDescription">{$slide.description nofilter}</div>
+                      <figcaption class="hero__slideCaption">
+                        <h2 class="hero__slideTitle">{$slide.title}</h2>
+                        <div class="hero__slideDescription">{$slide.description nofilter}</div>
                       </figcaption>
                     {/if}
                   </figure>
@@ -51,7 +51,7 @@
 
           </div>
 
-            <div class="swiper-pagination swiper-pagination-white swiper-pagination-clickable swiper-pagination-bullets o-hero__swiperPagination">
+            <div class="swiper-pagination swiper-pagination-white swiper-pagination-clickable swiper-pagination-bullets hero__swiperPagination">
  
 
         </div>

@@ -26,7 +26,6 @@
   height: 34px;
 }
 
-
 /* ========================================================================== */
 /* NAVIGATION MAIN - SEARCH */
 /* ========================================================================== */
@@ -46,8 +45,8 @@
   background: $white;
 }
 .navSearch__input{
-  max-width: 500px;
   flex-grow: 1;
+  width: 100%;
   border: 0;
   padding: 0 60px 0 20px;
 }
@@ -78,6 +77,10 @@
 .navCurrency__selector{
   display: flex;
   height: 100%;
+
+  &:focus{
+    outline: none;
+  }
 }
 .navCurrency__button{
   background: transparent;
@@ -92,7 +95,10 @@
   align-items: center;
 
   &:hover, &:active, &:focus, &[aria-expanded="true"]{
-    background: rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.2);
+  }
+  &:focus{
+    outline: none;
   }
 }
 .navCurrency__icon{
@@ -148,7 +154,7 @@
 
   &:hover, &:active, &:focus{
     text-decoration: none;
-    background: rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.2);
   }
 }
 .navUser__icon{
@@ -186,7 +192,7 @@
 
   &:hover, &:active, &:focus{
     text-decoration: none;
-    background: rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.2);
   }
 }
 .navCart__icon{
@@ -204,7 +210,7 @@
 /* ==================================================================================================================================================== */
 
 .navbarCategory{
-  background: $bg-light;
+  background: $gray-100;
   position: relative;
   display: flex;
   height: 60px;

@@ -79,7 +79,7 @@
 
 <script defer>
   var sliderSpeed = $("#hero_swiper").data("interval");
-  var carousel_main = new Swiper('.o-hero__swiperContent', {
+  var carousel_main = new Swiper('.hero__swiperContent', {
     lazy: true,
     autoplay: {
       delay: sliderSpeed,
@@ -89,12 +89,12 @@
     zoom: false,
     loop: true,
     pagination: {
-        el: '.o-hero__swiperPagination',
+        el: '.hero__swiperPagination',
         clickable: true,
     },
     navigation: {
-        nextEl: '.o-hero__swiperButton.-next',
-        prevEl: 'o-hero__swiperButton.-prev',
+        nextEl: '.hero__swiperButton.-next',
+        prevEl: 'hero__swiperButton.-prev',
     },
   });
 

@@ -31,7 +31,10 @@
 
 
 
-/* rem setup */
+/* -------------------------------------------------------------------------- */
+/* REM SETUP */
+/* -------------------------------------------------------------------------- */
+
 html {
     font-size: 10px;
 }
@@ -50,16 +53,19 @@ body {
     font-size: 1.5rem;
     color: $gray-800;
     background: $white;
-    font-family: $font-family-main, $font-family-system;
+    font-family: $font-family-system;
     overflow-x: hidden;
     position: relative;
     width:100%;
     margin: 0 auto;
     /*max-width: 1920px;
     transition: 0.3s margin ease;*/
-} 
+}
 
-/* global box-sizing */
+/* -------------------------------------------------------------------------- */
+/* GLOBAL BOX SIZING */
+/* -------------------------------------------------------------------------- */
+
 *, *:after, *:before {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -67,7 +73,10 @@ body {
     -moz-osx-font-smoothing: auto;
     text-rendering: optimizeLegibility;
 }
-/* clear */
+/* -------------------------------------------------------------------------- */
+/* CLEAR */
+/* -------------------------------------------------------------------------- */
+
 .clear {
     *zoom: 1;
 
@@ -79,15 +88,22 @@ body {
         clear: both;
     }
 }
-/* images */
+
+/* -------------------------------------------------------------------------- */
+/* IMAGES RESPOSIV */
+/* -------------------------------------------------------------------------- */
+
 img {
     max-width: 100%;
-    vertical-align: bottom;
+    vertical-align: middle;
     height: auto;
     transition: 0.3s all ease;
 }
 
-/* cover image */
+/* -------------------------------------------------------------------------- */
+/* OBJECT FIT COVER IMAGE */
+/* -------------------------------------------------------------------------- */
+
 .bgCover__wrap{
     position: relative;
     z-index: 1;
@@ -100,6 +116,10 @@ img {
     z-index: -1;
 }
 
+/* -------------------------------------------------------------------------- */
+/* SELECTIONS */
+/* -------------------------------------------------------------------------- */
+
 ::selection{
     color: $white;
     background: $brand-primary;
@@ -108,8 +128,6 @@ img {
     color: $text-primary;
     opacity: 0.75;
 }
-
-
 
 /* ========================================================================== */
 /* PARTIALS */

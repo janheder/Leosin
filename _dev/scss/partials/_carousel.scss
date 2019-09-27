@@ -1,34 +1,34 @@
-.o-hero__swiper{
+.hero__swiper{
     height: 400px;
 }
-.o-hero__swiperContent{
+.hero__swiperContent{
     width: 100%;
     height: 100%;
     position: relative;
     overflow: hidden;
 }
-.o-hero__slide{
+.hero__slide{
     display: flex;
     height: auto;
     position: relative;
     z-index: 1;
 }
-.o-hero__slideLink{
+.hero__slideLink{
     display: flex;
     justify-content: center;
     align-items: center;
     background: $gray-200;
 }
-.o-hero__slideFigure{
+.hero__slideFigure{
     margin: 0;
     height: 100%;
 }
-.o-hero__slideImg{
+.hero__slideImg{
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
-.o-hero__slidePreloader{
+.hero__slidePreloader{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -55,7 +55,7 @@
         background: $bg-white;
     }
 }
-.o-hero__slideCaption{
+.hero__slideCaption{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -63,11 +63,11 @@
     padding: 20px;
     background: rgba(0, 0, 0, 0.9);
 }
-.o-hero__slideTitle{
+.hero__slideTitle{
     font-size: 3.6rem;
     color: $text-white;
 }
-.o-hero__slideDescription{
+.hero__slideDescription{
     font-size: 1.8rem;
     color: $text-white;
 }

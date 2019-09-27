@@ -20,7 +20,7 @@
     "siema": "^1.5.1",
     "vanilla-lazyload": "^8.15.1"
   },
-  "name": "janheder.cz",
+  "name": "leosintheme",
   "version": "1.0.0",
   "main": "index.html",
   "dependencies": {
