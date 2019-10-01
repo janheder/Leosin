@@ -34,7 +34,7 @@
       </a>
     {/if}
 
-    <div class="body cart-hover-content">
+    <div class="navCart__previewContent">
     
       <ul>
         {foreach from=$cart.products item=product}

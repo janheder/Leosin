@@ -28,9 +28,14 @@
     {include file='_partials/form-errors.tpl' errors=$errors['']}
   {/block}
 
-  <form id="login-form" action=" {block name='login_form_actionurl'}{$action}{/block}" method="post">
+  <form class="loginForm" id="loginForm" action=" {block name='login_form_actionurl'}{$action}{/block}" method="post">
 
-    <section class="form-fields">
+    <header class="loginForm__header">
+        <h1 class="loginForm__title">{l s='Log in to your account' d='Shop.Theme.Customeraccount'}</h1>
+        <span class="loginForm__subtitle"><a href="{$urls.pages.register}" data-link-action="display-register-form">{l s='No account? Create one here' d='Shop.Theme.Customeraccount'}</a></span>
+    </header>
+
+    <section class="loginForm__fields">
       {block name='form_fields'}
         {foreach from=$formFields item="field"}
           {block name='form_field'}
@@ -39,20 +44,20 @@
         {/foreach}
       {/block}
 
-      <p class="lost_password">
+      <span class="loginForm__lostPassword">
         <a href="{$urls.pages.password}" rel="nofollow">
           {l s='Forgot your password?' d='Shop.Theme.Customeraccount'}
         </a>
-      </p>
+      </span>
     </section>
 
     {block name='login_form_footer'}
-      <footer class="form-footer">
+      <section class="loginForm__footer">
         <input type="hidden" name="submitLogin" value="1">
         {block name='form_buttons'}
-          <button data-link-action="sign-in" type="submit">{l s='Sign in' d='Shop.Theme.Actions'}</button>
+          <button class="btn loginForm__btn" data-link-action="sign-in" type="submit">{l s='Sign in' d='Shop.Theme.Actions'}</button>
         {/block}
-      </footer>
+      </section>
     {/block}
 
   </form>

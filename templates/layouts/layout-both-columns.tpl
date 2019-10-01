@@ -37,6 +37,10 @@
       {hook h='displayAfterBodyOpeningTag'}
     {/block}
 
+    {block name='notifications'}
+      {include file='_partials/notifications.tpl'}
+    {/block}
+    
     <header>
       {block name='header'}
         {include file='_partials/header.tpl'}
@@ -47,9 +51,7 @@
       {/block}
     </header>
 
-    {block name='notifications'}
-      {include file='_partials/notifications.tpl'}
-    {/block}
+
 
     <main>
 
