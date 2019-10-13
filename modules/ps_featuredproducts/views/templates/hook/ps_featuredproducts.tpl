@@ -22,14 +22,14 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<section class="o-featuredProducts">
-  <div class="container o-featuredProducts__container">
+<section class="featuredProducts">
+  <div class="container featuredProducts__container">
     <h1 class="a-featuredProducts__Title">{l s='Popular Products' d='Shop.Theme.Catalog'}</h1>
-    <div class="productGrid o-featuredProducts__grid">
+    <div class="productGrid featuredProducts__grid">
       {foreach from=$products item="product"}
         {include file="catalog/_partials/miniatures/product.tpl" product=$product}
       {/foreach}
     </div>
-    <a class="btn o-featuredProducts__btn" href="{$allProductsLink}">{l s='All products' d='Shop.Theme.Catalog'}</a>
+    <a class="btn featuredProducts__btn" href="{$allProductsLink}">{l s='All products' d='Shop.Theme.Catalog'}</a>
   </div>
 </section>

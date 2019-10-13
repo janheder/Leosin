@@ -23,11 +23,11 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <!-- Block search module TOP -->
-<div class="navSearch" data-search-controller-url="{$search_controller_url}">
+<div class="navSearch" id="js-navSearch" data-search-controller-url="{$search_controller_url}">
 	<form class="navSearch__form" method="get" action="{$search_controller_url}">
 		<div class="navSearch__formGroup">
 			<input type="hidden" name="controller" value="search">
-			<input type="search" name="search" class="navSearch__input" value="{$search_string}" placeholder="{l s='Search our catalog' d='Shop.Theme.Catalog'}" aria-label="{l s='Search' d='Shop.Theme.Catalog'}">
+			<input type="text" name="search" class="navSearch__input" id="js-navSearch__input" value="{$search_string}" placeholder="{l s='Search our catalog' d='Shop.Theme.Catalog'}" aria-label="{l s='Search' d='Shop.Theme.Catalog'}">
 			<button type="submit" class="btn navSearch__btn">
 				<img src="{$urls.img_url}icons/search.svg" class="navSearch__icon">
 				<span class="navSearch__btnTitle">{l s='Search' d='Shop.Theme.Catalog'}</span>

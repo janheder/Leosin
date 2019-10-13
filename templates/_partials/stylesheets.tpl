@@ -46,10 +46,10 @@
 <script>window.jQuery || document.write('<script src="{$urls.js_url}jquery.min.js">\x3C/script>')</script>
 
 
-{*
+
   {foreach $stylesheets.inline as $stylesheet}
     <style>
       {$stylesheet.content}
     </style>
   {/foreach}
-*}
+

@@ -181,7 +181,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
+
+  &:hover .navCart__link, &:active .navCart__link, &:focus .navCart__link{
+    text-decoration: none;
+    background: rgba(0,0,0,0.2);
+  }
 }
 .navCart__previewContent{
   position: absolute;
@@ -189,6 +193,10 @@
   transform: translate(0, 100%);
   z-index: 2;
   background: $white;
+  display: none;
+}
+.navCart__preview:hover .navCart__previewContent {
+  display: flex;
 }
 .navCart__link{
   display: flex;
@@ -197,11 +205,6 @@
   align-items: center;
   height: 100%;
   padding: 0 20px;
-
-  &:hover, &:active, &:focus{
-    text-decoration: none;
-    background: rgba(0,0,0,0.2);
-  }
 }
 .navCart__icon{
   height: 20px;

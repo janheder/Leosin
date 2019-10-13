@@ -27,18 +27,22 @@
 {block name='content'}
 
   {block name='page_header_container'}
-    <header class="page-header1">
-      {block name='page_header'}
-        <h1>{block name='page_title'}{/block}</h1>
-      {/block}
+    <header class="page-header">
+      <div class="container">
+        {block name='page_header'}
+          <h1>{block name='page_title'}{/block}</h1>
+        {/block}
+      </div>
     </header>
   {/block}
 
   {block name='page_content_container'}
     <section id="content" class="page-content">
-      {block name='page_content'}
-        <!-- Page content -->
-      {/block}
+      <div class="container">
+        {block name='page_content'}
+          <!-- Page content -->
+        {/block}
+      </div>
     </section>
   {/block}
   

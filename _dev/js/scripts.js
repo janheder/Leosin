@@ -9,6 +9,16 @@
 /* ========================================================================== */
 
 // =============================================================================
+// LAZY LOAD
+// =============================================================================
+
+
+var myLazyLoad = new LazyLoad({
+    elements_selector: ".lazy"
+});
+
+
+// =============================================================================
 // OBJECT FIT FALLBACK
 // =============================================================================
 
@@ -29,9 +39,25 @@ else {
 }
 
 // =============================================================================
-// LAZY LOAD
+// HERO SLIDER
 // =============================================================================
 
-var myLazyLoad = new LazyLoad({
-    elements_selector: ".lazy"
+var sliderSpeed = $("#hero_swiper").data("interval");
+var carousel_main = new Swiper('.hero__swiperContent', {
+    lazy: true,
+    autoplay: {
+        delay: sliderSpeed,
+    },
+    spaceBetween: 0,
+    grabCursor: true,
+    zoom: false,
+    loop: true,
+    pagination: {
+        el: '.hero__swiperPagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.hero__swiperButton.-next',
+        prevEl: 'hero__swiperButton.-prev',
+    },
 });

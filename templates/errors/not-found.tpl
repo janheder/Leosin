@@ -23,15 +23,17 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <section id="content" class="page-content page-not-found">
-  {block name='page_content'}
-    <p>{l s='Sorry for the inconvenience.' d='Shop.Theme.Global'}</p>
+  <div class="container">
+    {block name='page_content'}
+      <p>{l s='Sorry for the inconvenience.' d='Shop.Theme.Global'}</p>
 
-    {block name='search'}
-      {hook h='displaySearch'}
-    {/block}
+      {block name='search'}
+        {hook h='displaySearch'}
+      {/block}
 
-    {block name='hook_not_found'}
-      {hook h='displayNotFound'}
+      {block name='hook_not_found'}
+        {hook h='displayNotFound'}
+      {/block}
     {/block}
-  {/block}
+  </div>
 </section>

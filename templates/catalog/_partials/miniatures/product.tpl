@@ -9,10 +9,17 @@
           {block name='product_thumbnail'}
             <div class="itemProduct__imgContainer">
               <div class="itemProduct__imgWrap">
-                <img src="{$product.cover.medium.url}" data-src="{$product.cover.medium.url}" class="lazy itemProduct__img" alt="{$product.cover.legend}" data-full-size-image-url ="{$product.cover.large.url}">
-                {if $product.discount_type === 'percentage'}
-                  <span class="itemProduct__tag -sale">{$product.discount_percentage}</span>
-                {/if}
+                <picture>
+                  <source srcset="" type="" alt="{$product.cover.legend}">
+                  <img src="{$product.cover.medium.url}" data-src="{$product.cover.medium.url}" class="lazy itemProduct__img" alt="{$product.cover.legend}" data-full-size-image-url ="{$product.cover.large.url}">
+                </picture>
+                {block name='product_flags'}
+                <div class="itemProduct__flags">
+                  {foreach from=$product.flags item=flag}
+                    <span class="itemProduct__flag {$flag.type}">{$flag.label}</span>
+                  {/foreach}
+                </div>
+              {/block}
               </div>
             </div>
           {/block}
@@ -83,13 +90,7 @@
 
 
 
-        {block name='product_flags'}
-          <ul class="product-flags">
-            {foreach from=$product.flags item=flag}
-              <li class="{$flag.type}">{$flag.label}</li>
-            {/foreach}
-          </ul>
-        {/block}
+
 
         {block name='product_availability'}
           {if $product.show_availability}

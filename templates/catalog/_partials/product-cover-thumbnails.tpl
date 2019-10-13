@@ -25,7 +25,10 @@
 <div class="images-container">
   {block name='product_cover'}
     <div class="product-cover">
-      <img src="{$product.cover.bySize.medium_default.url}" alt="{$product.cover.legend}" title="{$product.cover.legend}" width="{$product.cover.bySize.medium_default.width}" itemprop="image">
+      <picture>
+        <source srcset="" type="">
+        <img src="{$product.cover.bySize.medium_default.url}" alt="{$product.cover.legend}" title="{$product.cover.legend}" width="{$product.cover.bySize.medium_default.width}" itemprop="image">
+      </picture>
     </div>
   {/block}
 

@@ -26,12 +26,9 @@
 
   {if $logged}
 
-    <a class="navUser__link" href="{$logout_url}" rel="nofollow">
-      {l s='Sign out' d='Shop.Theme.Actions'}
-    </a>
-
-    <a class="account" href="{$my_account_url}" title="{l s='View my customer account' d='Shop.Theme.Customeraccount'}" rel="nofollow">
-      <span class="hidden-sm-down">{$customerName}</span>
+    <a class="navUser__link" href="{$my_account_url}" title="{l s='View my customer account' d='Shop.Theme.Customeraccount'}" rel="nofollow">
+      <img src="{$urls.img_url}icons/user-white.svg" class="navUser__icon">
+      <span class="navUser__title">{$customerName}</span>
     </a>
 
   {else}

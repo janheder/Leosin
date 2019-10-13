@@ -53,9 +53,9 @@
 
 
 
-    <main>
+    <main id="swup">
 
-        
+
       {hook h="displayWrapperTop"}
 
       {block name='left_column'}
@@ -90,7 +90,7 @@
 
       {hook h="displayWrapperBottom"}
     
-  
+    
     </main>
 
     <footer>

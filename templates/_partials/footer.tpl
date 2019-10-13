@@ -28,10 +28,10 @@
 
 <div class="container">
   <div class="row">
-{block name='hook_footer'}
-  {hook h='displayFooter'}
-{/block}
-</div>
+    {block name='hook_footer'}
+      {hook h='displayFooter'}
+    {/block}
+  </div>
 </div>
 
 {block name='hook_footer_after'}
@@ -47,55 +47,8 @@
   </div>
 </section>
 
-<!-- Popper for Bootstrap support-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script>
-  if(typeof(Popper) === 'undefined') {
-  document.write('<script src="{$urls.js_url}popper.min.js">\x3C/script>')} 
-</script>
-
-<!-- Bootstrap core JavaScript-->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script>
-  if(typeof($.fn.modal) === 'undefined') {
-  document.write('<script src="{$urls.js_url}bootstrap.min.js">\x3C/script>')}
-</script>
-
-<!-- FontAwesome 5-->
-<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js" integrity="sha384-0AJY8UERsBUKdWcyF3o2kisLKeIo6G4Tbd8Y6fbyw6qYmn4WBuqcvxokp8m2UzSD" crossorigin="anonymous"></script>
-<script>
-  if(typeof(FontAwesome) === 'undefined') {
-  document.write('<script src="{$urls.js_url}fontawesome-all.min.js">\x3C/script>')}
-</script>
-
-<script src="{$urls.js_url}swiper.min.js"></script>
-
-<script src="{$urls.js_url}lazyload.min.js"></script>
-
-<script src="{$urls.js_url}scripts.min.js"></script>
-
-<!-- <script src="{$urls.base_url}themes/Leosin/assets/js//custom.js"></script> -->
 
 
-<script defer>
-  var sliderSpeed = $("#hero_swiper").data("interval");
-  var carousel_main = new Swiper('.hero__swiperContent', {
-    lazy: true,
-    autoplay: {
-      delay: sliderSpeed,
-    },
-    spaceBetween: 0,
-    grabCursor: true,
-    zoom: false,
-    loop: true,
-    pagination: {
-        el: '.hero__swiperPagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.hero__swiperButton.-next',
-        prevEl: 'hero__swiperButton.-prev',
-    },
-  });
 
-</script>
+
+

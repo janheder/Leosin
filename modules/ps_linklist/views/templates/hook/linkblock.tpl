@@ -32,13 +32,7 @@
 
         {foreach $linkBlock.links as $link}
 
-            <a
-                href="{$link.url}"
-                id="{$link.id}-{$linkBlock.id}"
-                class="footer__link"
-                title="{$link.description}"
-                {if !empty($link.target)} target="{$link.target}" {/if}
-            >
+            <a href="{$link.url}" id="{$link.id}-{$linkBlock.id}" class="footer__link" title="{$link.description}" {if !empty($link.target)} target="{$link.target}" {/if}>
               {$link.title}
             </a>
   

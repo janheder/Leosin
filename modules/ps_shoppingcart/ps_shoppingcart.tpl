@@ -25,14 +25,13 @@
 <div class="navCart">
   <div class="blockcart cart-preview navCart__preview {if $cart.products_count > 0}active{else}inactive{/if}" data-refresh-url="{$refresh_url}">
 
-    {if $cart.products_count > 0}
-      <a href="{$cart_url}" class="navCart__link" rel="nofollow">
-    {/if}
-      <img src="{$urls.img_url}icons/cart-white.svg" class="navCart__icon">
-      <span class="navCart__title">{l s='Cart' d='Shop.Theme.Checkout'} ({$cart.products_count})</span>
-    {if $cart.products_count > 0}
-      </a>
-    {/if}
+    <a href="{$cart_url}" class="navCart__link" >
+
+        <img src="{$urls.img_url}icons/cart-white.svg" class="navCart__icon">
+        <span class="navCart__title">{l s='Cart' d='Shop.Theme.Checkout'} ({$cart.products_count})</span>
+
+    </a>
+
 
     <div class="navCart__previewContent">
     
