@@ -59,33 +59,37 @@
       {hook h="displayWrapperTop"}
 
       {block name='left_column'}
-        <aside class="sideFilter">
-          {if $page.page_name == 'product'}
-            {hook h='displayLeftColumnProduct'}
-          {else}
-            {hook h="displayLeftColumn"}
-          {/if}
-        </aside>
-      {/block}
-
-      {block name='right_column'}
-        <div id="right-column">
-          {if $page.page_name == 'product'}
-            {hook h='displayRightColumnProduct'}
-          {else}
-            {hook h="displayRightColumn"}
-          {/if}
-        </div>
-      {/block}
-
-      {block name='content_wrapper'}
-        <section class="productContent">
-          {hook h="displayContentWrapperTop"}
-          {block name='content'}
-            <p>Hello world! This is HTML5 Boilerplate.</p>
+        <div class="container">
+          <div class="categoryWrap">
+            <aside class="sideFilter">
+              {if $page.page_name == 'product'}
+                {hook h='displayLeftColumnProduct'}
+              {else}
+                {hook h="displayLeftColumn"}
+              {/if}
+            </aside>
           {/block}
-          {hook h="displayContentWrapperBottom"}
-        </section>
+
+          {block name='right_column'}
+            <div id="right-column">
+              {if $page.page_name == 'product'}
+                {hook h='displayRightColumnProduct'}
+              {else}
+                {hook h="displayRightColumn"}
+              {/if}
+            </div>
+          {/block}
+
+          {block name='content_wrapper'}
+            <section class="productContent">
+              {hook h="displayContentWrapperTop"}
+              {block name='content'}
+                <p>Hello world! This is HTML5 Boilerplate.</p>
+              {/block}
+              {hook h="displayContentWrapperBottom"}
+            </section>
+          </div>
+        </div>
       {/block}
 
       {hook h="displayWrapperBottom"}

@@ -45,15 +45,17 @@
 
     {block name='content'}
       <section id="content">
+        <div class="container">
 
-        {block name='cart_summary'}
-          {include file='checkout/_partials/cart-summary.tpl' cart=$cart}
-        {/block}
+          {block name='cart_summary'}
+            {include file='checkout/_partials/cart-summary.tpl' cart=$cart}
+          {/block}
 
-        {block name='cart_summary'}
-          {render file='checkout/checkout-process.tpl' ui=$checkout_process}
-        {/block}
-
+          {block name='cart_summary'}
+            {render file='checkout/checkout-process.tpl' ui=$checkout_process}
+          {/block}
+          
+        </div>
       </section>
     {/block}
 

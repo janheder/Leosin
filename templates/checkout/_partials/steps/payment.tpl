@@ -2,34 +2,7 @@
 
 {block name='step_content'}
 
-  {if $conditions_to_approve|count}
-    <p class="ps-hidden-by-js">
-      {* At the moment, we're not showing the checkboxes when JS is disabled
-         because it makes ensuring they were checked very tricky and overcomplicates
-         the template. Might change later.
-      *}
-      {l s='By confirming the order, you certify that you have read and agree with all of the conditions below:' d='Shop.Theme.Checkout'}
-    </p>
 
-    <form id="conditions-to-approve" method="GET">
-      <ul>
-        {foreach from=$conditions_to_approve item="condition" key="condition_name"}
-          <li>
-            <input  id    = "conditions_to_approve[{$condition_name}]"
-                    name  = "conditions_to_approve[{$condition_name}]"
-                    required
-                    type  = "checkbox"
-                    value = "1"
-                    class = "ps-shown-by-js"
-            >
-            <label for="conditions_to_approve[{$condition_name}]">
-              {$condition nofilter}
-            </label>
-          </li>
-        {/foreach}
-      </ul>
-    </form>
-  {/if}
 
   <div class="payment-options">
     {foreach from=$payment_options item="module_options"}
@@ -89,6 +62,35 @@
       <p class="warning">{l s='Unfortunately, there are no payment method available.' d='Shop.Theme.Checkout'}</p>
     {/foreach}
   </div>
+
+  {if $conditions_to_approve|count}
+    <p class="ps-hidden-by-js">
+      {* At the moment, we're not showing the checkboxes when JS is disabled
+         because it makes ensuring they were checked very tricky and overcomplicates
+         the template. Might change later.
+      *}
+      {l s='By confirming the order, you certify that you have read and agree with all of the conditions below:' d='Shop.Theme.Checkout'}
+    </p>
+
+    <form id="conditions-to-approve" method="GET">
+      <ul>
+        {foreach from=$conditions_to_approve item="condition" key="condition_name"}
+          <li>
+            <input  id    = "conditions_to_approve[{$condition_name}]"
+                    name  = "conditions_to_approve[{$condition_name}]"
+                    required
+                    type  = "checkbox"
+                    value = "1"
+                    class = "ps-shown-by-js"
+            >
+            <label for="conditions_to_approve[{$condition_name}]">
+              {$condition nofilter}
+            </label>
+          </li>
+        {/foreach}
+      </ul>
+    </form>
+  {/if}
 
   <div id="payment-confirmation">
     <div class="ps-shown-by-js">

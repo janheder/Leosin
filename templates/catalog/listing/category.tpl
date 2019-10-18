@@ -26,11 +26,13 @@
 
 {block name='product_list_header'}
 
-  <h1>{$category.name}</h1>
-  <div class="category-cover">
+  
+  <section class="pageHeader">
+    <h1>{$category.name}</h1>
+    <div id="category-description">{$category.description nofilter}</div>
     <img src="{$category.image.large.url}" alt="{$category.image.legend}">
-  </div>
-  <div id="category-description">{$category.description nofilter}</div>
+  </section>
+  
 
   {block name='category_subcategories'}
     <aside>

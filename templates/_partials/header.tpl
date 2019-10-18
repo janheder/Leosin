@@ -46,7 +46,11 @@
 
 {block name='header_top'}
   <nav class="navbarCategory">
+        <div class="container navbarCategory__container">
+        <div class="accordion navbarCategory__accordion" id="navbarCategoryAccordion">
     {hook h='displayTop'}
+                </div>
+      </div>
   </nav>
 
   {hook h='displayNavFullWidth'}
