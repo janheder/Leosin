@@ -1,3 +1,6 @@
+.hero{
+    padding: 40px 0;
+}
 .hero__swiper{
     height: 400px;
 }
@@ -18,10 +21,12 @@
     justify-content: center;
     align-items: center;
     background: $gray-200;
+    width: 100%;
 }
 .hero__slideFigure{
     margin: 0;
     height: 100%;
+    width: 100%;
 }
 .hero__slideImg{
     height: 100%;

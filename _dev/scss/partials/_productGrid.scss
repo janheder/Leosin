@@ -1,0 +1,29 @@
+.productGrid{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+
+
+.productItem {
+  flex: 0 0 50%;
+}
+
+@media screen and (min-width: 576px){
+  .productItem {
+    flex: 0 0 33.333%;
+  }
+}
+@media screen and (min-width: 768px){
+  .productItem {
+    flex: 0 0 33.3333%;
+  }
+}
+@media screen and (min-width: 992px){
+  .productItem {
+    flex: 0 0 25%;
+  }
+}
+

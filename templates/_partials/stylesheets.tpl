@@ -25,12 +25,8 @@
 
 
 <!-- Bootstrap-->
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" onerror="loadBootstrap()" id="loadBootstrap">
-<script>
-  function loadBootstrap() {
-    $( "#loadBootstrap" ).append('<link href="{$urls.css_url}bootstrap.min.css" rel="stylesheet">');
-  }
-</script>
+<link href="{$urls.css_url}bootstrap-reboot.min.css" rel="stylesheet">
+<link href="{$urls.css_url}bootstrap-grid.min.css" rel="stylesheet">
 
 <!-- Main CSS-->
 <link href="{$urls.css_url}swiper.min.css" rel="stylesheet">

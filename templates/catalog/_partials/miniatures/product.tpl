@@ -1,22 +1,23 @@
 {block name='product_miniature_item'}
-  <article class="itemProduct" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}" itemscope itemtype="http://schema.org/Product">
+  <article class="productItem" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}" itemscope itemtype="http://schema.org/Product">
 
-    <div class="itemProduct__inner">
+    <div class="productItem__inner">
 
-      <div class="itemProduct__top">
+      <div class="productItem__top">
 
-        <a href="{$product.url}" class="itemProduct__thumbnail">
+        <a href="{$product.url}" class="productItem__thumbnail">
           {block name='product_thumbnail'}
-            <div class="itemProduct__imgContainer">
-              <div class="itemProduct__imgWrap">
+            <div class="productItem__imgContainer">
+              <div class="productItem__imgWrap">
                 <picture>
                   <source srcset="" type="" alt="{$product.cover.legend}">
-                  <img src="{$product.cover.medium.url}" data-src="{$product.cover.medium.url}" class="lazy itemProduct__img" alt="{$product.cover.legend}" data-full-size-image-url ="{$product.cover.large.url}">
+                  <img src="" data-src="{$product.cover.medium.url}" class="lazy productItem__img" alt="{$product.cover.legend}" data-full-size-image-url ="{$product.cover.large.url}">
+                  <span class="lazy productItem__preloader"></span>
                 </picture>
                 {block name='product_flags'}
-                <div class="itemProduct__flags">
+                <div class="productItem__flags">
                   {foreach from=$product.flags item=flag}
-                    <span class="itemProduct__flag {$flag.type}">{$flag.label}</span>
+                    <span class="productItem__flag --{$flag.type}">{$flag.label}</span>
                   {/foreach}
                 </div>
               {/block}
@@ -25,7 +26,7 @@
           {/block}
 
           {block name='product_name'}
-            <h1 class="itemProduct__title" itemprop="name">{$product.name}</h1>
+            <h1 class="productItem__title" itemprop="name">{$product.name}</h1>
           {/block}
         </a>
         
@@ -34,29 +35,29 @@
 
 
 
-      <div class="itemProduct__bottom">
+      <div class="productItem__bottom">
 
         {block name='product_description_short'}
-          <div class="itemProduct__description" itemprop="description">{$product.description_short nofilter}</div>
+          <div class="productItem__description" itemprop="description">{$product.description_short nofilter}</div>
         {/block}
 
         {block name='product_price_and_shipping'}
           {if $product.show_price}
-            <div class="itemProduct__priceWrap">
+            <div class="productItem__priceWrap">
               {if $product.has_discount}
                 {hook h='displayProductPriceBlock' product=$product type="old_price"}
 
-                <span class="itemProduct__priceOld">{$product.regular_price}</span>
+                <span class="productItem__priceOld">{$product.regular_price}</span>
                 {if $product.discount_type === 'percentage'}
-                  <span class="itemProduct__pricePercentage">{$product.discount_percentage}</span>
+                  <span class="productItem__pricePercentage">{$product.discount_percentage}</span>
                 {elseif $product.discount_type === 'amount'}
-                  <span class="itemProduct__priceNumber">{$product.discount_amount_to_display}</span>
+                  <span class="productItem__priceNumber">{$product.discount_amount_to_display}</span>
                 {/if}
               {/if}
 
               {hook h='displayProductPriceBlock' product=$product type="before_price"}
 
-              <span itemprop="price" class="itemProduct__price">{$product.price}</span>
+              <span itemprop="price" class="productItem__price">{$product.price}</span>
 
               {hook h='displayProductPriceBlock' product=$product type="unit_price"}
 
@@ -66,10 +67,10 @@
         {/block}
 
         {block name='product_list_actions'}
-          <div class="itemProduct__cta">
+          <div class="productItem__cta">
             {if $product.add_to_cart_url}
                 <a
-                  class = "btn itemProduct__addToCart"
+                  class = "btn productItem__addToCart"
                   href  = "{$product.add_to_cart_url}"
                   rel   = "nofollow"
                   data-id-product="{$product.id_product}"

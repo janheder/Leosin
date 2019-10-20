@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='variant_links'}
-  <div class="itemProduct__variants">
+  <div class="productItem__variants">
     {foreach from=$variants item=variant}
 
       {block name='variant_link_item'}

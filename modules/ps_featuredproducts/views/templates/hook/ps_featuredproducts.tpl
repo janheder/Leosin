@@ -30,6 +30,8 @@
         {include file="catalog/_partials/miniatures/product.tpl" product=$product}
       {/foreach}
     </div>
-    <a class="btn featuredProducts__btn" href="{$allProductsLink}">{l s='All products' d='Shop.Theme.Catalog'}</a>
+    <div class="featuredProducts__btnWrap">
+      <a class="btn featuredProducts__btn" href="{$allProductsLink}">{l s='All products' d='Shop.Theme.Catalog'}</a>
+    </div>
   </div>
 </section>

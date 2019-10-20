@@ -2,4 +2,16 @@
   font-size: 1.6rem;
   background: $red-600;
   color: $white;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  transition: 0.2s ease background, color;
+
+  &:hover, &:active, &:focus{
+    text-decoration: none;
+    background: $red-700;
+    color: $white;
+  }
 }
