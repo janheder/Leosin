@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 
-<div id="block_myaccount_infos" class="col-md-2 links wrapper">
+<div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
   <h4 class="footer__title">{l s='Your account' d='Shop.Theme.Customeraccount'}</h4>
 
     {foreach from=$my_account_urls item=my_account_url}

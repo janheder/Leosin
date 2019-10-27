@@ -22,16 +22,17 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<section class="featured-products clearfix mt-3">
-  <h1 class="h1 products-section-title text-uppercase">
-    {l s='Best Sellers' d='Shop.Theme.Catalog'}
-  </h1>
-  <div class="products">
-    {foreach from=$products item="product"}
-      {include file="catalog/_partials/miniatures/product.tpl" product=$product}
-    {/foreach}
+
+<section class="featuredProducts">
+  <div class="container featuredProducts__container">
+    <h1 class="featuredProducts__Title">{l s='Best Sellers' d='Shop.Theme.Catalog'}</h1>
+    <div class="productGrid featuredProducts__grid">
+      {foreach from=$products item="product"}
+        {include file="catalog/_partials/miniatures/product.tpl" product=$product}
+      {/foreach}
+    </div>
+    <div class="featuredProducts__btnWrap">
+      <a class="btn featuredProducts__btn" href="{$allBestSellers}">{l s='All best sellers' d='Shop.Theme.Catalog'}</a>
+    </div>
   </div>
-  <a class="all-product-link float-xs-left float-md-right h4" href="{$allBestSellers}">
-    {l s='All best sellers' d='Shop.Theme.Catalog'}<i class="material-icons">&#xE315;</i>
-  </a>
 </section>

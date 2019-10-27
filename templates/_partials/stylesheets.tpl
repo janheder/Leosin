@@ -25,8 +25,8 @@
 
 
 <!-- Bootstrap-->
-<link href="{$urls.css_url}bootstrap-reboot.min.css" rel="stylesheet">
-<link href="{$urls.css_url}bootstrap-grid.min.css" rel="stylesheet">
+<link href="{$urls.css_url}bootstrap.min.css" rel="stylesheet">
+
 
 <!-- Main CSS-->
 <link href="{$urls.css_url}swiper.min.css" rel="stylesheet">
@@ -38,9 +38,7 @@
 <link href="{$urls.css_url}custom.css" rel="stylesheet">
 
 <!-- jQuery-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="{$urls.js_url}jquery.min.js">\x3C/script>')</script>
-
+<script src="{$urls.js_url}jquery.min.js"></script>
 
 
   {foreach $stylesheets.inline as $stylesheet}

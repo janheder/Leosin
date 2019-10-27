@@ -1,3 +1,16 @@
 .copyright{
     
 }
+.copyright__title{
+    color: $white;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.copyright__link{
+    color: $gray-400;
+
+    &:hover, &:active, &:focus{
+        color: $white;
+        text-decoration: none;
+    }
+}

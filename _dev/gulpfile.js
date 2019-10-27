@@ -52,8 +52,8 @@ gulp.task('minifyjs:watch', function () {
 gulp.task('serve', function(){
 
 	browserSync.init({
-    port: 80,
-    proxy: "localhost:1337/prestashop"
+    port: 4000,
+    proxy: "localhost:8888/prestashop"
   });
   
 	gulp.watch('../assets/**/*.css').on('change', browserSync.reload);

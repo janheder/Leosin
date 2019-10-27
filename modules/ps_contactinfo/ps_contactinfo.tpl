@@ -26,41 +26,14 @@
 
     <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
       <h4 class="footer__title">{l s='Store information' d='Shop.Theme.Global'}</h4>
-        {$contact_infos.address.formatted nofilter}
+        <p class="footer__text">{$contact_infos.address.formatted nofilter}</p>
         {if $contact_infos.phone}
-          <br>
-          {* [1][/1] is for a HTML tag. *}
-          {l s='Call us: [1]%phone%[/1]'
-            sprintf=[
-            '[1]' => '<span>',
-            '[/1]' => '</span>',
-            '%phone%' => $contact_infos.phone
-            ]
-            d='Shop.Theme.Global'
-          }
+          <p class="footer__link" tel="{$contact_infos.phone}">{$contact_infos.phone}</p>
         {/if}
         {if $contact_infos.fax}
-          <br>
-          {* [1][/1] is for a HTML tag. *}
-          {l
-            s='Fax: [1]%fax%[/1]'
-            sprintf=[
-              '[1]' => '<span>',
-              '[/1]' => '</span>',
-              '%fax%' => $contact_infos.fax
-            ]
-            d='Shop.Theme.Global'
-          }
+          <p class="footer__text">{$contact_infos.fax}</p>
         {/if}
         {if $contact_infos.email}
-          <br>
-          {* [1][/1] is for a HTML tag. *}
-          {l
-            s='[1]%email%[/1]'
-            sprintf=[
-              '[1]' => '<a href="mailto:'|cat:$contact_infos.email|cat:'" class="dropdown">',
-              '[/1]' => '</a>',
-              '%email%' => $contact_infos.email
-            ]}
+          <p class="footer__link" mailto="{$contact_infos.email}">{$contact_infos.email}</p>
         {/if}
     </div>
