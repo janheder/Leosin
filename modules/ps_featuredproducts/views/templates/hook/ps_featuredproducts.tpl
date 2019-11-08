@@ -22,7 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<section class="featuredProducts">
+<section class="featuredProducts --favorite">
   <div class="container featuredProducts__container">
     <h1 class="featuredProducts__Title">{l s='Popular Products' d='Shop.Theme.Catalog'}</h1>
     <div class="productGrid featuredProducts__grid">

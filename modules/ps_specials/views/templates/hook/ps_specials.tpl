@@ -23,16 +23,16 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 
-<section class="featured-products clearfix mt-3">
-  <h1 class="h1 products-section-title text-uppercase">
-    {l s='On sale' d='Shop.Theme.Catalog'}
-  </h1>
-  <div class="products">
-    {foreach from=$products item="product"}
-      {include file="catalog/_partials/miniatures/product.tpl" product=$product}
-    {/foreach}
+<section class="featuredProducts --sale">
+  <div class="container featuredProducts__container">
+    <h1 class="featuredProducts__Title">{l s='On sale' d='Shop.Theme.Catalog'}</h1>
+    <div class="productGrid featuredProducts__grid">
+      {foreach from=$products item="product"}
+        {include file="catalog/_partials/miniatures/product.tpl" product=$product}
+      {/foreach}
+    </div>
+    <div class="featuredProducts__btnWrap">
+      <a class="btn featuredProducts__btn" href="{$allSpecialProductsLink}}">{l s='All sale products' d='Shop.Theme.Catalog'}</a>
+    </div>
   </div>
-  <a class="all-product-link float-xs-left float-md-right h4" href="{$allSpecialProductsLink}">
-    {l s='All sale products' d='Shop.Theme.Catalog'}<i class="material-icons">&#xE315;</i>
-  </a>
 </section>
