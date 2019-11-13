@@ -10,6 +10,7 @@ var pump = require('pump');
 var concat = require('gulp-concat');
 var autoprefixer= require('autoprefixer');
 var sassGlob = require('gulp-sass-glob');
+const babel = require('gulp-babel');
 
 // COMPILE SASS
 gulp.task('sass', function () {
@@ -35,6 +36,9 @@ gulp.task('minifyjs', function (cb) {
         gulp.src('./js/**/*.js'),
         sourcemaps.init(),
         concat('scripts.min.js'),
+        babel({
+          presets: ['@babel/preset-env']
+        }),
         uglify(),
         sourcemaps.write('./maps'),
         gulp.dest('../assets/js')

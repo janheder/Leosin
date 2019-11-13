@@ -113,9 +113,16 @@ assets:
         media: all
         priority: 500
 
+      - id: js-swup
+        path: assets/js/swup.min.js
+        media: all
+        priority: 600
+
       - id: js-scripts
         path: assets/js/scripts.min.js
         media: all
-        priority: 600
+        priority: 700
+
+
 
 

@@ -29,7 +29,8 @@
 {/block}
 
 {block name='page_content_container'}
-  <section id="content" class="page-content page-stores">
+  <section id="content" class="pageContent --stores">
+    <div class="container">
 
     {foreach $stores as $store}
       <article id="store-{$store.id}" class="store-item">
@@ -72,6 +73,6 @@
 
       </article>
     {/foreach}
-
+    </div>
   </section>
 {/block}

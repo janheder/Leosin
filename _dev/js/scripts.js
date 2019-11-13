@@ -9,13 +9,30 @@
 /* ========================================================================== */
 
 // =============================================================================
+// SWUP
+// =============================================================================
+
+const swup = new Swup({
+    plugins: [new SwupScrollPlugin(), new SwupHeadPlugin(), new SwupBodyClassPlugin()]
+});
+
+// =============================================================================
 // LAZY LOAD
 // =============================================================================
 
+function lazy() {
+    if(document.querySelector('.lazy') != null) {
 
-var myLazyLoad = new LazyLoad({
-    elements_selector: ".lazy"
-});
+        var myLazyLoad = new LazyLoad({
+            elements_selector: ".lazy"
+        });
+        
+    }
+}
+
+lazy();
+document.addEventListener('swup:contentReplaced', lazy);
+
 
 
 // =============================================================================
@@ -42,22 +59,35 @@ else {
 // HERO SLIDER
 // =============================================================================
 
-var sliderSpeed = $("#hero_swiper").data("interval");
-var carousel_main = new Swiper('.hero__swiperContent', {
-    lazy: true,
-    autoplay: {
-        delay: sliderSpeed,
-    },
-    spaceBetween: 0,
-    grabCursor: true,
-    zoom: false,
-    loop: true,
-    pagination: {
-        el: '.hero__swiperPagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.hero__swiperButton.-next',
-        prevEl: 'hero__swiperButton.-prev',
-    },
-});
+function init() {
+    if(document.querySelector('#hero_swiper') != null) {
+
+        var sliderSpeed = $("#hero_swiper").data("interval");
+        var carousel_main = new Swiper('.hero__swiperContent', {
+            lazy: true,
+            autoplay: {
+                delay: sliderSpeed,
+            },
+            spaceBetween: 0,
+            grabCursor: true,
+            zoom: false,
+            loop: true,
+            pagination: {
+                el: '.hero__swiperPagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.hero__swiperButton.-next',
+                prevEl: 'hero__swiperButton.-prev',
+            },
+        });
+
+    }
+}
+
+init();
+document.addEventListener('swup:contentReplaced', init);
+
+
+
+

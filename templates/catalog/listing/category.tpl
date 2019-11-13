@@ -28,9 +28,9 @@
 
   
   <section class="pageHeader">
-    <h1>{$category.name}</h1>
-    <div id="category-description">{$category.description nofilter}</div>
-    <img src="{$category.image.large.url}" alt="{$category.image.legend}">
+    <h1 class="pageHeader__title">{$category.name}</h1>
+    <div class="pageHeader__text">{$category.description nofilter}</div>
+    <img class="pageHeader__img" src="{$category.image.large.url}" alt="{$category.image.legend}">
   </section>
   
 

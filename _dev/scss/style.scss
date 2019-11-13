@@ -153,3 +153,34 @@ img {
 /* ========================================================================== */
 
 @import "partials/**/*";
+
+.transition-fade {
+    transition: 0.4s ease opacity;
+    opacity: 1;
+  }
+  
+  html.is-animating .transition-fade {
+    opacity: 0;
+  }
+
+
+.tr-loading{
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 30px;
+      width: 30px;
+      opacity: 0;
+}
+html.is-animating .tr-loading{
+    opacity: 1;
+
+    img{
+        animation: spin 4s linear infinite;
+    }
+}
+
+@keyframes spin {
+    100% {transform: rotate(360deg);}
+}

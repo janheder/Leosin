@@ -222,6 +222,11 @@
   z-index: 2;
   background: $white;
   display: none;
+  flex-direction: column;
+  padding: 20px;
+  width: 300px;
+  right: 0;
+  box-shadow: $box-shadow;
 }
 .navCart__preview:hover .navCart__previewContent {
   display: flex;

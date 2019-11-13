@@ -31,7 +31,7 @@
     {/block}
   </head>
 
-  <body id="{$page.page_name}" class="{$page.body_classes|classnames}">
+  <body class="{$page.page_name} {$page.body_classes|classnames}">
 
     {block name='hook_after_body_opening_tag'}
       {hook h='displayAfterBodyOpeningTag'}
@@ -41,7 +41,7 @@
       {include file='_partials/notifications.tpl'}
     {/block}
     
-    <header>
+    <header id="swup">
       {block name='header'}
         {include file='_partials/header.tpl'}
       {/block}
@@ -53,7 +53,7 @@
 
 
 
-    <main id="swup">
+    <main id="swup" class="transition-fade">
 
 
       {hook h="displayWrapperTop"}
@@ -96,8 +96,9 @@
     
     
     </main>
+    <div class="tr-loading"><img src="{$urls.theme_assets}/img/icons/preloader.svg"></div>
 
-    <footer>
+    <footer id="swup">
       {block name='footer'}
         {include file='_partials/footer.tpl'}
       {/block}

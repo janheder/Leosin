@@ -1,6 +1,7 @@
 .pageHeader{
   background: $white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 60px 0;
