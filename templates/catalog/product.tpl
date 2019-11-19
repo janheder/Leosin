@@ -47,7 +47,7 @@
 
 {block name='content'}
 
-  <section id="main" itemscope itemtype="https://schema.org/Product">
+  <section id="mainContent" itemscope itemtype="https://schema.org/Product">
     <meta itemprop="url" content="{$product.url}">
 
     {block name='product_activation'}

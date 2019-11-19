@@ -14,11 +14,18 @@
   height: 100%;
 }
 
-
 @media (min-width: 768px){
-.navbarMain__container {
-    /*width: 100%;
-    max-width: none;*/
+  .navbarMain__container {
+      /*width: 100%;
+      max-width: none;*/
+    }
+  }
+@media (max-width: 767px){
+  .navbarMain {
+    height: 56px;
+  }
+  .navbarMain__container {
+    padding: 0;
   }
 }
 
@@ -28,6 +35,11 @@
 
 .logoWrap{
   padding: 0;
+  flex-shrink: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logoImg{
@@ -164,6 +176,12 @@
   }
 }
 
+@media (max-width: 767px){
+  .navCurrency{
+      display: none;
+    }
+  }
+
 /* ========================================================================== */
 /* NAVIGATION MAIN - USER */
 /* ========================================================================== */
@@ -193,6 +211,7 @@
   color: $white;
   padding-top: 5px;
   text-align: center;
+  white-space: nowrap;
 }
 
 /* ========================================================================== */
@@ -247,6 +266,7 @@
   color: $white;
   padding-top: 5px;
   text-align: center;
+  white-space: nowrap;
 }
 
 
@@ -273,6 +293,19 @@
   display: flex;
   height: 100%;
   align-items: center;
+
+  &.--current{
+    .navbarCategory__link::after, .navbarCategory__linkDesktop::after{
+      content: "";
+      bottom: 0;
+      left: 0;
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background: $purple-500;    
+    }
+  }
 }
 .navbarCategory__link, .navbarCategory__linkDesktop{
   display: flex;
@@ -280,10 +313,11 @@
   align-items: center;
   padding: 0 20px;
   color: $gray-800;
+  position: relative;
 
   &:hover, &:active, &:focus{
-    background: $gray-100;
-    color: $purple-900;
+    background: $white;
+    color: $purple-500;
     text-decoration: none;
   }
 }
@@ -356,6 +390,42 @@
     display: flex;
   }
   .navbarCategory__linkDesktop ~ .navbarCategory__link{
+    display: none;
+  }
+}
+@media screen and (max-width: 991px){
+  .navbarCategory{
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    width: 260px;
+    height: 100%;
+    z-index: 40;
+    transition: 0.2s ease transform;
+    overflow-y: auto;
+
+    &.--active{
+      transform: translateX(0%);
+    }
+  }
+}
+
+
+
+.navToggle{
+  height: 100%;
+  width: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+.navToggle__img{
+  height: 18px;
+}
+@media screen and (min-width: 992px){
+  .navToggle{
     display: none;
   }
 }

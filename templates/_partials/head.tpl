@@ -49,17 +49,19 @@
 {/block}
 
 {block name='head_viewport'}
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5">
 {/block}
 
 {block name='head_icons'}
   <link rel="icon" type="image/vnd.microsoft.icon" href="{$shop.favicon}?{$shop.favicon_update_time}">
   <link rel="shortcut icon" type="image/x-icon" href="{$shop.favicon}?{$shop.favicon_update_time}">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 {/block}
 
 {block name='stylesheets'}
   {include file="_partials/stylesheets.tpl" stylesheets=$stylesheets}
 {/block}
+
 
 {block name='javascript_head'}
   {include file="_partials/javascript.tpl" javascript=$javascript.head vars=$js_custom_vars}
@@ -70,5 +72,10 @@
 {/block}
 
 {block name='hook_extra'}
+  <link rel="apple-touch-icon" sizes="180x180" href="{$urls.img_url}favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{$urls.img_url}favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{$urls.img_url}favicon/favicon-16x16.png">
   <meta name="theme-color" content="#2B2F30">
+  <meta name="msapplication-TileColor" content="#2B2F30">
+  <link rel="manifest" href="{$urls.img_url}favicon/site.webmanifest">
 {/block}

@@ -25,7 +25,7 @@
 {extends file=$layout}
 
 {block name='content'}
-  <section id="main">
+  <section id="mainContent">
 
     {block name='product_list_header'}
       <h2 class="h2">{$listing.label}</h2>

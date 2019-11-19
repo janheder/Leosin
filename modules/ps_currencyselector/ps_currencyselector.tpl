@@ -27,7 +27,7 @@
   <div class="dropdown js-dropdown navCurrency__selector">
     
     <button data-target="#" data-toggle="dropdown" class="navCurrency__button" aria-haspopup="true" aria-expanded="false" aria-label="{l s='Currency dropdown' d='Shop.Theme.Global'}">
-      <img src="{$urls.img_url}icons/currency-white.svg" class="navCurrency__icon">
+      <img src="{$urls.img_url}icons/currency-white.svg" class="navCurrency__icon" alt="{$current_currency.iso_code}">
       <span class="navCurrency__title">{$current_currency.iso_code} {$current_currency.sign}</span>
     </button>
     <ul class="dropdown-menu hidden-sm-down navCurrency__dropdown" aria-labelledby="currency-selector-label">

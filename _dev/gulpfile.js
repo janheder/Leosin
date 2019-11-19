@@ -35,7 +35,7 @@ gulp.task('minifyjs', function (cb) {
   pump([
         gulp.src('./js/**/*.js'),
         sourcemaps.init(),
-        concat('scripts.min.js'),
+        concat('theme.min.js'),
         babel({
           presets: ['@babel/preset-env']
         }),
@@ -48,7 +48,7 @@ gulp.task('minifyjs', function (cb) {
 });
 
 gulp.task('minifyjs:watch', function () {
-  gulp.watch('./js/scripts.js', ['minifyjs']);
+  gulp.watch('./js/*.js', ['minifyjs']);
 });
 
 

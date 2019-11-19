@@ -27,14 +27,14 @@
   {if $logged}
 
     <a class="navUser__link" href="{$my_account_url}" title="{l s='View my customer account' d='Shop.Theme.Customeraccount'}" rel="nofollow">
-      <img src="{$urls.img_url}icons/user-white.svg" class="navUser__icon">
+      <img src="{$urls.img_url}icons/user-white.svg" class="navUser__icon" alt="{$customerName}">
       <span class="navUser__title">{$customerName}</span>
     </a>
 
   {else}
 
     <a href="{$my_account_url}" class="navUser__link" title="{l s='Log in to your customer account' d='Shop.Theme.Customeraccount'}" rel="nofollow">
-      <img src="{$urls.img_url}icons/user-white.svg" class="navUser__icon">
+      <img src="{$urls.img_url}icons/user-white.svg" class="navUser__icon" alt="{l s='Sign in' d='Shop.Theme.Actions'}">
       <span class="navUser__title">{l s='Sign in' d='Shop.Theme.Actions'}</span>
     </a>
 

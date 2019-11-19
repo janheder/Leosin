@@ -1,0 +1,16 @@
+.transition-fade {
+    transition: 0.4s ease opacity;
+    opacity: 1;
+}
+
+html.is-animating .transition-fade {
+    opacity: 0;
+}
+
+.transition-slideup{
+    transition: 0.3s ease transform;
+    transform: translateY(0px);
+}
+html.is-animating .transition-slideup {
+    transform: translateY(15px);
+}

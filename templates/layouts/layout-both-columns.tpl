@@ -33,6 +33,8 @@
 
   <body class="{$page.page_name} {$page.body_classes|classnames}">
 
+    <div id="js-backdrop"></div>
+
     {block name='hook_after_body_opening_tag'}
       {hook h='displayAfterBodyOpeningTag'}
     {/block}
@@ -41,7 +43,7 @@
       {include file='_partials/notifications.tpl'}
     {/block}
     
-    <header id="swup">
+    <header id="header">
       {block name='header'}
         {include file='_partials/header.tpl'}
       {/block}
@@ -53,8 +55,8 @@
 
 
 
-    <main id="swup" class="transition-fade">
-
+    <main id="main">
+      <div class="mainContent transition-fade">
 
       {hook h="displayWrapperTop"}
 
@@ -94,11 +96,11 @@
 
       {hook h="displayWrapperBottom"}
     
-    
-    </main>
-    <div class="tr-loading"><img src="{$urls.theme_assets}/img/icons/preloader.svg"></div>
+      </div>
 
-    <footer id="swup">
+    </main>
+
+    <footer id="footer">
       {block name='footer'}
         {include file='_partials/footer.tpl'}
       {/block}
@@ -111,6 +113,34 @@
     {block name='hook_before_body_closing_tag'}
       {hook h='displayBeforeBodyClosingTag'}
     {/block}
+
+    <script type="text/javascript" src="{$urls.base_url}themes/core.js" ></script>
+
+    <script type="text/javascript" src="{$urls.js_url}jquery-ui.min.js" ></script>
+
+    <script type="text/javascript" src="{$urls.theme_assets}../modules/ps_searchbar/ps_searchbar.js" ></script>
+    <script type="text/javascript" src="{$urls.base_url}modules/ps_shoppingcart/ps_shoppingcart.js" ></script>
+
+    <script type="text/javascript" src="{$urls.js_url}popper.min.js" ></script>
+    <script type="text/javascript" src="{$urls.js_url}bootstrap.min.js" ></script>
+    <script type="text/javascript" src="{$urls.js_url}swiper.min.js" ></script>
+    <script type="text/javascript" src="{$urls.js_url}lazyload.min.js" ></script>
+    <script type="text/javascript" src="{$urls.js_url}swup.min.js" ></script>
+
+    <script type="text/javascript" src="{$urls.js_url}upup.min.js" ></script>
+  <script>
+    UpUp.start({
+      'content-url': 'pwa/offline.html',
+      'assets': ['pwa/logo.svg', 
+                  'pwa/offline.css', 
+                  'pwa/favicon.ico'],
+      'service-worker-url': 'upup.sw.min.js'
+    });
+  </script>
+
+
+    <script type="text/javascript" src="{$urls.js_url}theme.min.js"></script>
+    <script type="text/javascript" src="{$urls.js_url}custom.js" ></script>
 
   </body>
 

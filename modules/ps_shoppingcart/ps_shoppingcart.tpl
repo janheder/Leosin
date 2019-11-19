@@ -27,7 +27,7 @@
 
     <a href="{$cart_url}" class="navCart__link" >
 
-        <img src="{$urls.img_url}icons/cart-white.svg" class="navCart__icon">
+        <img src="{$urls.img_url}icons/cart-white.svg" class="navCart__icon" alt="{l s='Cart' d='Shop.Theme.Checkout'}">
         <span class="navCart__title">{l s='Cart' d='Shop.Theme.Checkout'} ({$cart.products_count})</span>
 
     </a>

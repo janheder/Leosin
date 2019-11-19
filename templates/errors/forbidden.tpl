@@ -25,6 +25,6 @@
 {extends file=$layout}
 
 {block name='content'}
-  <section id="main">
+  <section id="mainContent">
   </section>
 {/block}

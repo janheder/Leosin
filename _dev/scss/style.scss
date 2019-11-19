@@ -57,6 +57,25 @@ body {
     font-weight: 400;
     line-height: 1.5;
     text-align: left;
+
+    &.--navOpen{
+        overflow: hidden;
+
+        #js-backdrop{
+            display: block;
+        }
+    }
+}
+
+#js-backdrop{
+    z-index: 30;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
 }
 
 @media (min-width: 576px){
@@ -154,33 +173,3 @@ img {
 
 @import "partials/**/*";
 
-.transition-fade {
-    transition: 0.4s ease opacity;
-    opacity: 1;
-  }
-  
-  html.is-animating .transition-fade {
-    opacity: 0;
-  }
-
-
-.tr-loading{
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      height: 30px;
-      width: 30px;
-      opacity: 0;
-}
-html.is-animating .tr-loading{
-    opacity: 1;
-
-    img{
-        animation: spin 4s linear infinite;
-    }
-}
-
-@keyframes spin {
-    100% {transform: rotate(360deg);}
-}

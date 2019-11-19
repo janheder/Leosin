@@ -1,5 +1,5 @@
 {block name='product_miniature_item'}
-  <article class="productItem" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}" itemscope itemtype="http://schema.org/Product">
+  <article class="productItem transition-slideup" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}" itemscope itemtype="http://schema.org/Product">
 
     <div class="productItem__inner">
 
@@ -10,7 +10,7 @@
             <div class="productItem__imgContainer">
               <div class="productItem__imgWrap">
                 <picture>
-                  <source srcset="" type="" alt="{$product.cover.legend}">
+                  {*<source srcset="{$product.cover.medium.url}.webp" type="image/webp" alt="{$product.cover.legend}">*}
                   <img src="" data-src="{$product.cover.medium.url}" class="lazy productItem__img" alt="{$product.cover.legend}" data-full-size-image-url ="{$product.cover.large.url}">
                   <span class="lazy productItem__preloader"></span>
                 </picture>

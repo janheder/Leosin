@@ -13,7 +13,8 @@
 // =============================================================================
 
 const swup = new Swup({
-    plugins: [new SwupScrollPlugin(), new SwupHeadPlugin(), new SwupBodyClassPlugin()]
+    plugins: [new SwupHeadPlugin(), new SwupBodyClassPlugin()],
+    containers: ["#header", "#main", "#footer"]
 });
 
 // =============================================================================
@@ -32,8 +33,6 @@ function lazy() {
 
 lazy();
 document.addEventListener('swup:contentReplaced', lazy);
-
-
 
 // =============================================================================
 // OBJECT FIT FALLBACK
@@ -59,7 +58,7 @@ else {
 // HERO SLIDER
 // =============================================================================
 
-function init() {
+function hero() {
     if(document.querySelector('#hero_swiper') != null) {
 
         var sliderSpeed = $("#hero_swiper").data("interval");
@@ -85,9 +84,37 @@ function init() {
     }
 }
 
-init();
-document.addEventListener('swup:contentReplaced', init);
+hero();
+document.addEventListener('swup:contentReplaced', hero);
 
+// =============================================================================
+// NAVIGATION 
+// =============================================================================
 
+function nav() {
+    if(document.querySelector('#js-navToggle') != null) {
 
+        $("#js-navToggle, #js-backdrop").click(function(){
+            $("#js-navToggle, #js-navbarCategory").toggleClass("--active");
+            $("body").toggleClass("--navOpen");
+        });
+    }
+}
 
+nav();
+document.addEventListener('swup:contentReplaced', nav);
+
+// =============================================================================
+// scroll to top after swup
+// =============================================================================
+
+function scroll() {
+    if(document.querySelector('body') != null) {
+
+        $("html, body").animate({ scrollTop: 0 }, "fast");
+
+    }
+}
+
+scroll();
+document.addEventListener('swup:contentReplaced', scroll);

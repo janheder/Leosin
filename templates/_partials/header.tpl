@@ -31,6 +31,11 @@
 
 <nav class="navbarMain">
   <div class="container navbarMain__container">
+
+    <div class="navToggle" id="js-navToggle">
+      <img src="{$urls.img_url}icons/hamburger-white.svg" class="navToggle__img" alt="Menu">
+    </div>
+
     {block name='header_logo'}
       <a class="logoWrap" href="{$urls.base_url}" title="{$shop.name}">
         <img src="{$shop.logo}" class="logoImg" alt="{$shop.name}">
@@ -45,11 +50,11 @@
 
 
 {block name='header_top'}
-  <nav class="navbarCategory">
+  <nav class="navbarCategory" id="js-navbarCategory">
         <div class="container navbarCategory__container">
         <div class="accordion navbarCategory__accordion" id="navbarCategoryAccordion">
-    {hook h='displayTop'}
-                </div>
+          {hook h='displayTop'}
+        </div>
       </div>
   </nav>
 

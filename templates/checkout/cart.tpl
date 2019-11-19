@@ -26,7 +26,7 @@
 
 {block name='content'}
 
-  <section id="main">
+  <section id="mainContent">
     <div class="container">
       <h1>{l s='Shopping Cart' d='Shop.Theme.Checkout'}</h1>
 

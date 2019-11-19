@@ -25,7 +25,7 @@
 
 <section class="featuredProducts --new">
   <div class="container featuredProducts__container">
-    <h1 class="featuredProducts__Title">{l s='New products' d='Shop.Theme.Catalog'}</h1>
+    <h1 class="featuredProducts__Title transition-slideup">{l s='New products' d='Shop.Theme.Catalog'}</h1>
     <div class="productGrid featuredProducts__grid">
       {foreach from=$products item="product"}
         {include file="catalog/_partials/miniatures/product.tpl" product=$product}

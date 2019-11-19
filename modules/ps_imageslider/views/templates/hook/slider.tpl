@@ -25,7 +25,7 @@
 
 {if $homeslider.slides}
 
-  <section class="hero">
+  <section class="hero transition-slideup">
     <div class="container hero__container">
       <div class="hero__swiper" id="hero_swiper" data-interval="{$homeslider.speed}">
         <div class="hero__swiperContent">
