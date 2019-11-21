@@ -5,7 +5,7 @@
 
       <div class="productItem__top">
 
-        <a href="{$product.url}" class="productItem__thumbnail">
+        <a href="{$product.url}" class="productItem__thumbnail" data-swup-preload>
           {block name='product_thumbnail'}
             <div class="productItem__imgContainer">
               <div class="productItem__imgWrap">

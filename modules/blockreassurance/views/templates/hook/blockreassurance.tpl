@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {if $elements}
-  <div id="block-reassurance">
+  <div class="cartReasurance">
     <ul>
       {foreach from=$elements item=element}
         <li>

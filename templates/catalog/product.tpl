@@ -47,129 +47,143 @@
 
 {block name='content'}
 
-  <section id="mainContent" itemscope itemtype="https://schema.org/Product">
+
     <meta itemprop="url" content="{$product.url}">
 
     {block name='product_activation'}
       {include file='catalog/_partials/product-activation.tpl'}
     {/block}
 
-    {block name='page_header_container'}
-      <header class="page-header">
-        <div class="container">
-          {block name='page_header'}
-            <h1 itemprop="name">{block name='page_title'}{$product.name}{/block}</h1>
-          {/block}
-        </div>
-      </header>
-    {/block}
+
 
     {block name='page_content_container'}
-      <section id="content" class="page-content">
+      <section id="content" class="productPage">
         <div class="container">
-          {block name='page_content'}
-            {block name='product_flags'}
-              <ul class="product-flags">
-                {foreach from=$product.flags item=flag}
-                  <li>{$flag.label}</li>
-                {/foreach}
-              </ul>
-            {/block}
+          <div class="row">
 
-            {block name='product_cover_thumbnails'}
-              {include file='catalog/_partials/product-cover-thumbnails.tpl'}
-            {/block}
+            <div class="col-12 col-md-6"> {* start of first product column *}
+              {block name='page_content'}
+                {block name='product_flags'}
+                  <ul class="product-flags">
+                    {foreach from=$product.flags item=flag}
+                      <li>{$flag.label}</li>
+                    {/foreach}
+                  </ul>
+                {/block}
 
-            <div class="product-information">
-              {block name='product_reference'}
-                {if $product.reference}
-                  <p id="product-reference">
-                    <label>{l s='Reference' d='Shop.Theme.Catalog'}</label>
-                    <span itemprop="sku">{$product.reference}</span>
-                  </p>
-                {/if}
-              {/block}
+                {block name='product_cover_thumbnails'}
+                  {include file='catalog/_partials/product-cover-thumbnails.tpl'}
+                {/block}
 
-              {block name='product_condition'}
-                {if $product.condition}
-                  <p id="product-condition">
-                    <label>{l s='Condition' d='Shop.Theme.Catalog'}</label>
-                    <link itemprop="itemCondition" href="{$product.condition.schema_url}"/>
-                    <span>{$product.condition.label}</span>
-                  </p>
-                {/if}
-              {/block}
+        
+                {block name='product_reference'}
+                  {if $product.reference}
+                    <p id="product-reference">
+                      <label>{l s='Reference' d='Shop.Theme.Catalog'}</label>
+                      <span itemprop="sku">{$product.reference}</span>
+                    </p>
+                  {/if}
+                {/block}
 
-              {block name='product_description_short'}
-                <div id="product-description-short" itemprop="description">{$product.description_short nofilter}</div>
-              {/block}
+                {block name='product_condition'}
+                  {if $product.condition}
+                    <p id="product-condition">
+                      <label>{l s='Condition' d='Shop.Theme.Catalog'}</label>
+                      <link itemprop="itemCondition" href="{$product.condition.schema_url}"/>
+                      <span>{$product.condition.label}</span>
+                    </p>
+                  {/if}
+                {/block}
+
+              </div> {* end of first product column *}
+
+
+              <div class="col-12 col-md-6"> {* start of second product column *}
+
+                {block name='page_header_container'}
+                  <header class="productPage__heading" itemscope itemtype="https://schema.org/Product">
+                      {block name='page_header'}
+                        <h1 itemprop="name">{block name='page_title'}{$product.name}{/block}</h1>
+                      {/block}
+                  </header>
+                {/block}
+
+                {block name='product_description_short'}
+                  <div id="product-description-short" itemprop="description">{$product.description_short nofilter}</div>
+                {/block}
+
+                {block name='product_quantities'}
+                  {if $product.show_quantities}
+                    <p id="product-quantities">{$product.quantity} {$product.quantity_label}</p>
+                  {/if}
+                {/block}
+
+                {block name='product_availability'}
+                  {if $product.show_availability}
+                    <p id="product-availability">{$product.availability_message}</p>
+                  {/if}
+                {/block}
+                {block name='product_availability_date'}
+                  {if $product.availability_date}
+                    <p id="product-availability-date">
+                      <label>{l s='Availability date:' d='Shop.Theme.Catalog'} </label>
+                      <span>{$product.availability_date}</span>
+                    </p>
+                  {/if}
+                {/block}
+
+                {block name='product_out_of_stock'}
+                  <div class="product-out-of-stock">
+                    {hook h='actionProductOutOfStock' product=$product}
+                  </div>
+                {/block}
+        
+
+                <div class="product-actions">
+                  {block name='product_buy'}
+                    <form action="{$urls.pages.cart}" method="post" id="add-to-cart-or-refresh">
+                      <input type="hidden" name="token" value="{$static_token}">
+                      <input type="hidden" name="id_product" value="{$product.id}" id="product_page_product_id">
+                      <input type="hidden" name="id_customization" value="{$product.id_customization}" id="product_customization_id">
+
+                      {block name='product_prices'}
+                        {include file='catalog/_partials/product-prices.tpl'}
+                      {/block}
+
+                      {block name='product_variants'}
+                        {include file='catalog/_partials/product-variants.tpl'}
+                      {/block}
+
+
+                      {block name='product_add_to_cart'}
+                        {include file='catalog/_partials/product-add-to-cart.tpl'}
+                      {/block}
+
+                      {block name='hook_product_buttons'}
+                        {hook h='displayProductButtons' product=$product}
+                      {/block}
+
+                      {block name='product_additional_info'}
+                        {include file='catalog/_partials/product-additional-info.tpl'}
+                      {/block}
+                      
+                      {*
+                      {block name='product_refresh'}
+                        <input class="product-refresh ps-hidden-by-js" name="refresh" type="submit" value="{l s='Refresh' d='Shop.Theme.Actions'}">
+                      {/block}
+                      *}
+                    </form>
+                  {/block}
+                </div>
+              </div> {* end of second product column *}
 
               {block name='product_description'}
                 <div id="product-description">{$product.description nofilter}</div>
               {/block}
 
-              {block name='product_quantities'}
-                {if $product.show_quantities}
-                  <p id="product-quantities">{$product.quantity} {$product.quantity_label}</p>
-                {/if}
-              {/block}
-
-              {block name='product_availability'}
-                {if $product.show_availability}
-                  <p id="product-availability">{$product.availability_message}</p>
-                {/if}
-              {/block}
-
-              {block name='product_availability_date'}
-                {if $product.availability_date}
-                  <p id="product-availability-date">
-                    <label>{l s='Availability date:' d='Shop.Theme.Catalog'} </label>
-                    <span>{$product.availability_date}</span>
-                  </p>
-                {/if}
-              {/block}
-
-              {block name='product_out_of_stock'}
-                <div class="product-out-of-stock">
-                  {hook h='actionProductOutOfStock' product=$product}
-                </div>
-              {/block}
-            </div>
-
-            <div class="product-actions">
-              {block name='product_buy'}
-                <form action="{$urls.pages.cart}" method="post" id="add-to-cart-or-refresh">
-                  <input type="hidden" name="token" value="{$static_token}">
-                  <input type="hidden" name="id_product" value="{$product.id}" id="product_page_product_id">
-                  <input type="hidden" name="id_customization" value="{$product.id_customization}" id="product_customization_id">
-
-                  {block name='product_prices'}
-                    {include file='catalog/_partials/product-prices.tpl'}
-                  {/block}
-
-                  {block name='product_variants'}
-                    {include file='catalog/_partials/product-variants.tpl'}
-                  {/block}
 
 
-                  {block name='product_add_to_cart'}
-                    {include file='catalog/_partials/product-add-to-cart.tpl'}
-                  {/block}
 
-                  {block name='hook_product_buttons'}
-                    {hook h='displayProductButtons' product=$product}
-                  {/block}
-
-                  {block name='product_additional_info'}
-                    {include file='catalog/_partials/product-additional-info.tpl'}
-                  {/block}
-
-                  {block name='product_refresh'}
-                    <input class="product-refresh ps-hidden-by-js" name="refresh" type="submit" value="{l s='Refresh' d='Shop.Theme.Actions'}">
-                  {/block}
-                </form>
-              {/block}
-            </div>
 
             {block name='product_discounts'}
               {include file='catalog/_partials/product-discounts.tpl'}
@@ -250,12 +264,12 @@
               </div>
             {/foreach}
           {/block}
+        </div> 
         </div>
       </section>
     {/block}
 
 
 
-  </section>
 
 {/block}

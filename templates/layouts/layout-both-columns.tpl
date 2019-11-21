@@ -114,6 +114,8 @@
       {hook h='displayBeforeBodyClosingTag'}
     {/block}
 
+
+
     <script type="text/javascript" src="{$urls.base_url}themes/core.js" ></script>
 
     <script type="text/javascript" src="{$urls.js_url}jquery-ui.min.js" ></script>
@@ -128,19 +130,19 @@
     <script type="text/javascript" src="{$urls.js_url}swup.min.js" ></script>
 
     <script type="text/javascript" src="{$urls.js_url}upup.min.js" ></script>
-  <script>
-    UpUp.start({
-      'content-url': 'pwa/offline.html',
-      'assets': ['pwa/logo.svg', 
-                  'pwa/offline.css', 
-                  'pwa/favicon.ico'],
-      'service-worker-url': 'upup.sw.min.js'
-    });
-  </script>
+    <script>
+      UpUp.start({
+        'content-url': 'pwa/offline.html',
+        'assets': ['pwa/logo.svg', 
+                    'pwa/offline.css', 
+                    'pwa/favicon.ico'],
+        'service-worker-url': 'upup.sw.min.js'
+      });
+    </script>
 
 
     <script type="text/javascript" src="{$urls.js_url}theme.min.js"></script>
-    <script type="text/javascript" src="{$urls.js_url}custom.js" ></script>
+    <script type="text/javascript" src="{$urls.js_url}custom.js"></script>
 
   </body>
 

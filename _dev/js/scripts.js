@@ -13,7 +13,7 @@
 // =============================================================================
 
 const swup = new Swup({
-    plugins: [new SwupHeadPlugin(), new SwupBodyClassPlugin()],
+    plugins: [new SwupHeadPlugin(), new SwupBodyClassPlugin(), new SwupPreloadPlugin(), new SwupScriptsPlugin()],
     containers: ["#header", "#main", "#footer"]
 });
 

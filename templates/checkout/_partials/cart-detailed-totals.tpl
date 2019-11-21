@@ -23,22 +23,35 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='cart_detailed_totals'}
-  <div class="cart-detailed-totals">
-    <div class="cart-subtotals">
-      {foreach from=$cart.subtotals item="subtotal"}
-        <div class="{$subtotal.type}">
-          <span class="label">{$subtotal.label}</span>
-          <span class="value">{$subtotal.amount}{$product.price}</span>
-        </div>
-      {/foreach}
-    </div>
 
-    <div class="cart-total">
+
+    {foreach from=$cart.subtotals item="subtotal"}
+      {if $subtotal.value && $subtotal.type !== 'tax'}
+        <div class="cartSummary__subtotal" id="cart-subtotal-{$subtotal.type}">
+          <span class="label{if 'products' === $subtotal.type} js-subtotal{/if}">
+            {if 'products' == $subtotal.type}
+              {$cart.summary_string}
+            {else}
+              {$subtotal.label}
+            {/if}
+          </span>
+          <span class="value">
+            {if 'discount' == $subtotal.type}-&nbsp;{/if}{$subtotal.value}
+          </span>
+          {if $subtotal.type === 'shipping'}
+              <div><small class="value">{hook h='displayCheckoutSubtotalDetails' subtotal=$subtotal}</small></div>
+          {/if}
+        </div>
+      {/if}
+    {/foreach}
+
+
+    <div class="cartSummary__total">
       <span class="label">{$cart.totals.total.label}</span>
       <span class="value">{$cart.totals.total.amount}</span>
       {if $subtotal.type === 'shipping'}
           {hook h='displayCheckoutSubtotalDetails' subtotal=$subtotal}
       {/if}
     </div>
-  </div>
+
 {/block}

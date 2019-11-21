@@ -62,11 +62,11 @@
   {/if}
 
   {if $product.down_quantity_url}
-    <a href="{$product.down_quantity_url}" class="js-decrease-product-quantity" data-link-action="update-quantity">-</a>
+    <a href="{$product.down_quantity_url}" class="js-decrease-product-quantity" data-link-action="update-quantity" data-no-swup>-</a>
   {/if}
   <span class="product-quantity">{$product.quantity}</span>
   {if $product.up_quantity_url}
-    <a href="{$product.up_quantity_url}" class="js-increase-product-quantity" data-link-action="update-quantity">+</a>
+    <a href="{$product.up_quantity_url}" class="js-increase-product-quantity" data-link-action="update-quantity" data-no-swup>+</a>
   {/if}
   <a
     class="remove-from-cart"
@@ -74,7 +74,7 @@
     data-id-product="{$product.id_product|escape:'javascript'}"
     data-id-product-attribute="{$product.id_product_attribute|escape:'javascript'}"
     href="{$product.remove_from_cart_url}"
-    rel="nofollow"
+    rel="nofollow" data-no-swup
    >
     {l s='Remove' d='Shop.Theme.Actions'}
   </a>

@@ -27,7 +27,7 @@
     {hook h='displayBanner'}
   </div>
 {/block}
-
+ 
 
 <nav class="navbarMain">
   <div class="container navbarMain__container">

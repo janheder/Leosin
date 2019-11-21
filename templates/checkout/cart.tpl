@@ -26,7 +26,7 @@
 
 {block name='content'}
 
-  <section id="mainContent">
+
     <div class="container">
       <h1>{l s='Shopping Cart' d='Shop.Theme.Checkout'}</h1>
 
@@ -34,54 +34,62 @@
         {include file='checkout/_partials/cart-detailed.tpl' cart=$cart}
       {/block}
 
-      {block name='continue_shopping'}
-        <a href="{$urls.pages.index}">
-          {l s='Continue shopping' d='Shop.Theme.Actions'}
-        </a>
-      {/block}
+
 
       {block name='hook_shopping_cart_footer'}
         {hook h='displayShoppingCartFooter'}
       {/block}
 
       {block name='cart_summary'}
+        <section class="cartSummary">
 
-        {block name='cart_summary_line'}
-          {include file='checkout/_partials/cart-summary-items-subtotal.tpl' cart=$cart}
-        {/block}
 
-        {block name='cart_voucher'}
-          {include file='checkout/_partials/cart-voucher.tpl'}
-        {/block}
+          {*
+          {block name='cart_summary_line'}
+            {include file='checkout/_partials/cart-summary-items-subtotal.tpl' cart=$cart}
+          {/block}
+*}
+          {block name='cart_voucher'}
+            {include file='checkout/_partials/cart-voucher.tpl'}
+          {/block}
 
-        {block name='hook_shopping_cart'}
-          {hook h='displayShoppingCart'}
-        {/block}
+          {block name='hook_shopping_cart'}
+            {hook h='displayShoppingCart'}
+          {/block}
 
-        {block name='cart_totals'}
-          {include file='checkout/_partials/cart-detailed-totals.tpl' cart=$cart}
-        {/block}
+          {block name='cart_totals'}
+            {include file='checkout/_partials/cart-detailed-totals.tpl' cart=$cart}
+          {/block}
 
-        {block name='cart_actions'}
-          {if $cart.minimalPurchaseRequired}
-            <div class="notification notification-warning" role="alert" data-alert="warning">
-              {$cart.minimalPurchaseRequired}
-            </div>
-            <button disabled>{l s='Checkout' d='Shop.Theme.Actions'}</button>
-          {elseif empty($cart.products)}
-            <button disabled>{l s='Checkout' d='Shop.Theme.Actions'}</button>
-          {else}
-            <a href="{$urls.pages.order}">{l s='Checkout' d='Shop.Theme.Actions'}</a>
-            {hook h='displayExpressCheckout'}
-          {/if}
-        {/block}
+        </section>
+
+        <section class="cartButtons">
+          {block name='continue_shopping'}
+            <a href="{$urls.pages.index}"class="btn --secondary cartButtons__btn" >{l s='Continue shopping' d='Shop.Theme.Actions'}</a>
+          {/block}
+          <span class="cartButtons__spacer"></span>
+          {block name='cart_actions'}
+            {if $cart.minimalPurchaseRequired}
+              <div class="notification notification-warning" role="alert" data-alert="warning">
+                {$cart.minimalPurchaseRequired}
+              </div>
+              <button disabled>{l s='Checkout' d='Shop.Theme.Actions'}</button>
+            {elseif empty($cart.products)}
+              <button disabled>{l s='Checkout' d='Shop.Theme.Actions'}</button>
+            {else}
+              <a href="{$urls.pages.order}" class="btn --primary cartButtons__btn">{l s='Checkout' d='Shop.Theme.Actions'}</a>
+              {hook h='displayExpressCheckout'}
+            {/if}
+          {/block}
+        </section>
 
       {/block}
+
 
       {block name='hook_reassurance'}
         {hook h='displayReassurance'}
       {/block}
     </div>
-  </section>
+
 
 {/block}

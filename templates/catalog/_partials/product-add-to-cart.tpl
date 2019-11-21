@@ -51,7 +51,7 @@
       </p>
     {/block}
 
-    <button class="add-to-cart" type="submit" name="add" data-button-action="add-to-cart" {if !$product.add_to_cart_url}disabled{/if}>
+    <button class="btn{if !$product.add_to_cart_url}--disabled{/if}" data-no-swup type="submit" name="add" data-button-action="add-to-cart" {if !$product.add_to_cart_url}disabled{/if}>
       {l s='Add to cart' d='Shop.Theme.Actions'}
     </button>
 

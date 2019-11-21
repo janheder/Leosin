@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='cart_detailed'}
-  <div class="cart-overview js-cart" data-refresh-url="{url entity='cart' params=['ajax' => 1, 'action' => 'refresh']}">
+  <div class="cartOverview" id="js-cartOverview" data-refresh-url="{url entity='cart' params=['ajax' => 1, 'action' => 'refresh']}">
     <div class="body">
       <ul>
         {foreach from=$cart.products item=product}

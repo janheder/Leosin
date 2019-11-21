@@ -23,7 +23,23 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='header'}
-  <header id="header">
-    Simplified header
-  </header>
+<nav class="navbarMain">
+  <div class="container navbarMain__container">
+
+    <div class="navToggle" id="js-navToggle">
+      <img src="{$urls.img_url}icons/hamburger-white.svg" class="navToggle__img" alt="Menu">
+    </div>
+
+    {block name='header_logo'}
+      <a class="logoWrap" href="{$urls.base_url}" title="{$shop.name}">
+        <img src="{$shop.logo}" class="logoImg" alt="{$shop.name}">
+      </a>
+    {/block}
+
+    {block name='header_nav'}
+        {hook h='displayNav'}
+    {/block}
+  </div>
+</nav>
+
 {/block}
