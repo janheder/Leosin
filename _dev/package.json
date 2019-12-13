@@ -29,7 +29,7 @@
     "gulp-sass-glob": "^1.1.0",
     "gulp-typescript": "^5.0.0-alpha.3",
     "natives": "^1.1.6",
-    "npm": "^6.2.0",
+    "npm": "^6.13.4",
     "typescript": "^3.0.1"
   },
   "scripts": {
