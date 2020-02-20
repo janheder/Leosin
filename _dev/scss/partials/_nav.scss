@@ -33,7 +33,7 @@
 /* NAVIGATION MAIN - LOGO */
 /* ========================================================================== */
 
-.logoWrap{
+.navLogo{
   padding: 0;
   flex-shrink: 0;
   height: 100%;
@@ -42,8 +42,15 @@
   align-items: center;
 }
 
-.logoImg{
+.navLogo__img{
   height: 34px;
+}
+
+@media screen and (max-width: 767px){
+  .navLogo{
+    flex-grow: 1;
+    justify-content: flex-start;
+  }
 }
 
 /* ========================================================================== */
@@ -53,8 +60,8 @@
 .navSearch{
   flex-grow: 1;
   padding: 0 20px;
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .navSearch__form{
   max-width: 600px;
@@ -99,11 +106,34 @@
   display: none;
 }
 
+@media screen and (max-width: 767px){
+  .navSearch{
+    display: none;
+  }
+}
+
 .ui-autocomplete{
   background: $white;
   max-width: 600px;
 }
 
+.navSearchToggle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 54px;
+  flex-shrink: 0;
+}
+.navSearchToggle__icon{
+  height: 20px;
+}
+
+@media screen and (min-width: 768px){
+  .navSearchToggle{
+    display: none;
+  }
+}
 
 /* ========================================================================== */
 /* NAVIGATION MAIN - CURRENCY */
@@ -179,8 +209,8 @@
 @media (max-width: 767px){
   .navCurrency{
       display: none;
-    }
   }
+}
 
 /* ========================================================================== */
 /* NAVIGATION MAIN - USER */
@@ -214,6 +244,19 @@
   white-space: nowrap;
 }
 
+@media (max-width: 767px){
+  .navUser{
+    width: 54px;
+    flex-shrink: 0;
+  }
+  .navUser__link{
+    padding: 0;
+  }
+  .navUser__title{
+    display: none;
+  }
+}
+
 /* ========================================================================== */
 /* NAVIGATION MAIN - CART */
 /* ========================================================================== */
@@ -223,6 +266,7 @@
 }
 .navCart__preview{
   height: 100%;
+  width: 100%; 
   float: none;
   display: flex;
   flex-direction: column;
@@ -256,6 +300,7 @@
   justify-content: center;
   align-items: center;
   height: 100%;
+  width: 100%;
   padding: 0 20px;
 }
 .navCart__icon{
@@ -267,6 +312,18 @@
   padding-top: 5px;
   text-align: center;
   white-space: nowrap;
+}
+@media (max-width: 767px){
+  .navCart{
+    width: 54px;
+    flex-shrink: 0;
+  }
+  .navCart__link{
+    padding: 0;
+  }
+  .navCart__title{
+    display: none;
+  }
 }
 
 

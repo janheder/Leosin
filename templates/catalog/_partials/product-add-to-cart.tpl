@@ -22,33 +22,34 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="product-add-to-cart">
+
+{block name='product_minimal_quantity'}
+  {if $product.minimal_quantity > 1}
+    <span class="productPage__minQuantity">
+      {l
+        s='The minimum purchase order quantity for the product is %quantity%.'
+        d='Shop.Theme.Checkout'
+        sprintf=['%quantity%' => $product.minimal_quantity]
+      }
+    </span>
+  {/if}
+{/block}
+
+<div class="productPage__cta">
   {if !$configuration.is_catalog}
 
     {block name='product_quantity'}
-      <p class="product-quantity">
-        <label for="quantity_wanted">{l s='Quantity' d='Shop.Theme.Catalog'}</label>
+      <div class="productPage__quantity">
+        <label for="quantity_wanted" class="productPage__quantityTitle">{l s='Quantity' d='Shop.Theme.Catalog'}</label>
         <input
           type="number"
           name="qty"
           id="quantity_wanted"
           value="{$product.quantity_wanted}"
-          class="input-group"
+          class="productPage__quantityInput"
           min="{$product.minimal_quantity}"
         >
-      </p>
-    {/block}
-
-    {block name='product_minimal_quantity'}
-      <p class="product-minimal-quantity">
-      {if $product.minimal_quantity > 1}
-          {l
-            s='The minimum purchase order quantity for the product is %quantity%.'
-            d='Shop.Theme.Checkout'
-            sprintf=['%quantity%' => $product.minimal_quantity]
-          }
-      {/if}
-      </p>
+      </div>
     {/block}
 
     <button class="btn{if !$product.add_to_cart_url}--disabled{/if}" data-no-swup type="submit" name="add" data-button-action="add-to-cart" {if !$product.add_to_cart_url}disabled{/if}>

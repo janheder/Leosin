@@ -63,18 +63,12 @@
 
             <div class="col-12 col-md-6"> {* start of first product column *}
               {block name='page_content'}
-                {block name='product_flags'}
-                  <ul class="product-flags">
-                    {foreach from=$product.flags item=flag}
-                      <li>{$flag.label}</li>
-                    {/foreach}
-                  </ul>
-                {/block}
+         
 
                 {block name='product_cover_thumbnails'}
                   {include file='catalog/_partials/product-cover-thumbnails.tpl'}
                 {/block}
-
+        
         
                 {block name='product_reference'}
                   {if $product.reference}
@@ -139,42 +133,39 @@
                 {/block}
         
 
-                <div class="product-actions">
-                  {block name='product_buy'}
-                    <form action="{$urls.pages.cart}" method="post" id="add-to-cart-or-refresh">
-                      <input type="hidden" name="token" value="{$static_token}">
-                      <input type="hidden" name="id_product" value="{$product.id}" id="product_page_product_id">
-                      <input type="hidden" name="id_customization" value="{$product.id_customization}" id="product_customization_id">
+            
+                {block name='product_buy'}
+                  <form action="{$urls.pages.cart}" method="post" id="add-to-cart-or-refresh">
+                    <input type="hidden" name="token" value="{$static_token}">
+                    <input type="hidden" name="id_product" value="{$product.id}" id="product_page_product_id">
+                    <input type="hidden" name="id_customization" value="{$product.id_customization}" id="product_customization_id">
 
-                      {block name='product_prices'}
-                        {include file='catalog/_partials/product-prices.tpl'}
-                      {/block}
+                    {block name='product_prices'}
+                      {include file='catalog/_partials/product-prices.tpl'}
+                    {/block}
 
-                      {block name='product_variants'}
-                        {include file='catalog/_partials/product-variants.tpl'}
-                      {/block}
+                    {block name='product_variants'}
+                      {include file='catalog/_partials/product-variants.tpl'}
+                    {/block}
 
 
-                      {block name='product_add_to_cart'}
-                        {include file='catalog/_partials/product-add-to-cart.tpl'}
-                      {/block}
+                    {block name='product_add_to_cart'}
+                      {include file='catalog/_partials/product-add-to-cart.tpl'}
+                    {/block}
 
-                      {block name='hook_product_buttons'}
-                        {hook h='displayProductButtons' product=$product}
-                      {/block}
 
-                      {block name='product_additional_info'}
-                        {include file='catalog/_partials/product-additional-info.tpl'}
-                      {/block}
-                      
-                      {*
-                      {block name='product_refresh'}
-                        <input class="product-refresh ps-hidden-by-js" name="refresh" type="submit" value="{l s='Refresh' d='Shop.Theme.Actions'}">
-                      {/block}
-                      *}
-                    </form>
-                  {/block}
-                </div>
+                    {block name='product_additional_info'}
+                      {include file='catalog/_partials/product-additional-info.tpl'}
+                    {/block}
+                    
+                    {*
+                    {block name='product_refresh'}
+                      <input class="product-refresh ps-hidden-by-js" name="refresh" type="submit" value="{l s='Refresh' d='Shop.Theme.Actions'}">
+                    {/block}
+                    *}
+                  </form>
+                {/block}
+           
               </div> {* end of second product column *}
 
               {block name='product_description'}
@@ -234,10 +225,6 @@
               {/if}
             {/block}
 
-            {block name='product_footer'}
-              {hook h='displayFooterProduct' product=$product category=$category}
-            {/block}
-
             {block name='product_attachments'}
               {if $product.attachments}
                 <section class="product-attachments">
@@ -269,6 +256,9 @@
       </section>
     {/block}
 
+    {block name='product_footer'}
+      {hook h='displayFooterProduct' product=$product category=$category}
+    {/block}
 
 
 

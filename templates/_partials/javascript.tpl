@@ -39,20 +39,9 @@
 {if isset($vars) && $vars|@count}
   <script type="text/javascript">
 
-
-
     {foreach from=$vars key=var_name item=var_value}
     var {$var_name} = {$var_value|json_encode nofilter};
     {/foreach}
-    function hero1() {
 
-
-    {foreach from=$vars key=var_name item=var_value}
-    var {$var_name} = {$var_value|json_encode nofilter};
-    {/foreach}
-    }
-
-hero1();
-document.addEventListener('swup:contentReplaced', hero1);
   </script>
 {/if}

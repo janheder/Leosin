@@ -22,18 +22,26 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="images-container">
+<div class="productPage__thumbnailWrap">
+  {block name='product_flags'}
+    <div class="productPage__flags">
+      {foreach from=$product.flags item=flag}
+        <span class="productPage__flagsItem --{$flag.type}">{$flag.label}</span>
+      {/foreach}
+    </div>
+  {/block}
+
   {block name='product_cover'}
-    <div class="product-cover">
+    <div class="productPage__cover">
       <picture>
         <source srcset="" type="">
-        <img src="{$product.cover.bySize.medium_default.url}" alt="{$product.cover.legend}" title="{$product.cover.legend}" width="{$product.cover.bySize.medium_default.width}" itemprop="image">
+        <img src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}" title="{$product.cover.legend}" width="{$product.cover.bySize.medium_default.width}" itemprop="image">
       </picture>
     </div>
   {/block}
 
   {block name='product_images'}
-    <ul class="product-images">
+    <ul class="productPage__thumbnail">
       {foreach from=$product.images item=image}
         <li><img src="{$image.medium.url}" alt="{$image.legend}" title="{$image.legend}" width="100" itemprop="image"></li>
       {/foreach}

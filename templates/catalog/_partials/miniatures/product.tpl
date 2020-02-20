@@ -17,7 +17,7 @@
                 {block name='product_flags'}
                 <div class="productItem__flags">
                   {foreach from=$product.flags item=flag}
-                    <span class="productItem__flag --{$flag.type}">{$flag.label}</span>
+                    <span class="productItem__flagsItem --{$flag.type}">{$flag.label}</span>
                   {/foreach}
                 </div>
               {/block}
@@ -36,6 +36,7 @@
 
 
       <div class="productItem__bottom">
+       {hook h='displayProductListReviews' product=$product}
 
         {block name='product_description_short'}
           <div class="productItem__description" itemprop="description">{$product.description_short nofilter}</div>
@@ -100,8 +101,7 @@
           {/if}
         {/block}
 
-        {hook h='displayProductListReviews' product=$product}
-
+ 
       </div>
 
     </div>

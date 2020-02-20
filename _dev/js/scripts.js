@@ -112,9 +112,7 @@ function scroll() {
     if(document.querySelector('body') != null) {
 
         $("html, body").animate({ scrollTop: 0 }, "fast");
-
     }
 }
 
-scroll();
 document.addEventListener('swup:contentReplaced', scroll);

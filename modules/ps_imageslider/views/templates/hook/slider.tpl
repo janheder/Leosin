@@ -32,8 +32,8 @@
           <div class="swiper-wrapper hero__swiperWrapper">
 
             {foreach from=$homeslider.slides item=slide name='homeslider'}
-              {assign var="counter" value=$counter + 1}
-              <div class="swiper-slide hero__slide" data-slide={$counter}>
+      
+              <div class="swiper-slide hero__slide">
                 <a href="{$slide.url}" class="hero__slideLink">
                   <figure class="hero__slideFigure">
                     <img data-src="{$slide.image_url}" class="swiper-lazy hero__slideImg" alt="{$slide.legend|escape}" >

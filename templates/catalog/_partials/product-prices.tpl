@@ -23,18 +23,18 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {if $product.show_price}
-  <div class="product-prices">
+  <div class="productPage__price">
     {block name='product_discount'}
       {if $product.has_discount}
-        <p class="product-discount">
+        <span class="productPage__priceRegular">
           {hook h='displayProductPriceBlock' product=$product type="old_price"}
-          <span class="regular-price">{$product.regular_price}</span>
-        </p>
+          {$product.regular_price}
+        </span>
       {/if}
     {/block}
 
     {block name='product_price'}
-      <p class="product-price {if $product.has_discount}has-discount{/if}" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+      <div class="productPage__priceMain {if $product.has_discount}has-discount{/if}" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
         <link itemprop="availability" href="https://schema.org/InStock"/>
         <span itemprop="price" content="{$product.price_amount}">{$product.price}</span>
         {if $configuration.display_taxes_label}
@@ -49,7 +49,7 @@
             <span class="discount-amount">{l s='Save %amount%' d='Shop.Theme.Catalog' sprintf=['%amount%' => $product.discount_amount]}</span>
           {/if}
         {/if}
-      </p>
+      </div>
     {/block}
 
     {block name='product_without_taxes'}

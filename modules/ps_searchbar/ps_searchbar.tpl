@@ -35,4 +35,7 @@
 		</div>
 	</form>
 </div>
+<div class="navSearchToggle" id="js-navSearchToggle">
+	<img src="{$urls.img_url}icons/search-white.svg" class="navSearchToggle__icon">
+</div>
 <!-- /Block search module TOP -->

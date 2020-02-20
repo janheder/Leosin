@@ -44,17 +44,20 @@
     {/block}
 
     {block name='content'}
-      <section id="content">
+      <section>
         <div class="container">
-
-          {block name='cart_summary'}
-            {include file='checkout/_partials/cart-summary.tpl' cart=$cart}
-          {/block}
-
-          {block name='cart_summary'}
-            {render file='checkout/checkout-process.tpl' ui=$checkout_process}
-          {/block}
-          
+          <div class="row">
+            <div class="col-12 col-md-9">        
+              {block name='cart_summary'}
+                {render file='checkout/checkout-process.tpl' ui=$checkout_process}
+              {/block}
+            </div>
+            <div class="col-12 col-md-3">  
+              {block name='cart_summary'}
+                {include file='checkout/_partials/cart-summary.tpl' cart=$cart}
+              {/block}
+            </div>
+          </div>
         </div>
       </section>
     {/block}

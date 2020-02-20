@@ -26,7 +26,7 @@
   <div class="container">
     <a class="featuredBanner__link" href="{$banner_link}" title="{$banner_desc}">
       {if isset($banner_img)}
-        <img src="{$banner_img}" alt="{$banner_desc}" title="{$banner_desc}" class="featuredBanner__img">
+        <img data-src="{$banner_img}" alt="{$banner_desc}" title="{$banner_desc}" class="featuredBanner__img lazy">
       {else}
         <span>{$banner_desc}</span>
       {/if}

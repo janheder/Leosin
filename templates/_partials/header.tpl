@@ -37,8 +37,8 @@
     </div>
 
     {block name='header_logo'}
-      <a class="logoWrap" href="{$urls.base_url}" title="{$shop.name}">
-        <img src="{$shop.logo}" class="logoImg" alt="{$shop.name}">
+      <a class="navLogo" href="{$urls.base_url}" title="{$shop.name}">
+        <img src="{$shop.logo}" class="navLogo__img" alt="{$shop.name}">
       </a>
     {/block}
 

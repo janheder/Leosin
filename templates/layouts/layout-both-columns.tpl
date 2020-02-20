@@ -116,27 +116,27 @@
 
 
 
-    <script type="text/javascript" src="{$urls.base_url}themes/core.js" ></script>
+    <script type="text/javascript" src="{$urls.base_url}themes/core.js"></script>
 
-    <script type="text/javascript" src="{$urls.js_url}jquery-ui.min.js" ></script>
+    <script type="text/javascript" src="{$urls.js_url}jquery-ui.min.js"></script>
 
     <script type="text/javascript" src="{$urls.theme_assets}../modules/ps_searchbar/ps_searchbar.js" ></script>
     <script type="text/javascript" src="{$urls.base_url}modules/ps_shoppingcart/ps_shoppingcart.js" ></script>
 
-    <script type="text/javascript" src="{$urls.js_url}popper.min.js" ></script>
-    <script type="text/javascript" src="{$urls.js_url}bootstrap.min.js" ></script>
-    <script type="text/javascript" src="{$urls.js_url}swiper.min.js" ></script>
-    <script type="text/javascript" src="{$urls.js_url}lazyload.min.js" ></script>
-    <script type="text/javascript" src="{$urls.js_url}swup.min.js" ></script>
+    <script type="text/javascript" src="{$urls.js_url}popper.min.js"></script>
+    <script type="text/javascript" src="{$urls.js_url}bootstrap.min.js"></script>
+    <script type="text/javascript" src="{$urls.js_url}swiper.min.js"></script>
+    <script type="text/javascript" src="{$urls.js_url}lazyload.min.js"></script>
+    <script type="text/javascript" src="{$urls.js_url}swup.min.js"></script>
 
-    <script type="text/javascript" src="{$urls.js_url}upup.min.js" ></script>
+    <script type="text/javascript" src="{$urls.js_url}upup.min.js"></script>
     <script>
       UpUp.start({
-        'content-url': 'pwa/offline.html',
-        'assets': ['pwa/logo.svg', 
-                    'pwa/offline.css', 
-                    'pwa/favicon.ico'],
-        'service-worker-url': 'upup.sw.min.js'
+        'content-url': '{$urls.base_url}pwa/offline.html',
+        'assets': ['{$urls.base_url}pwa/logo.svg', 
+                    '{$urls.base_url}pwa/offline.css', 
+                    '{$urls.base_url}pwa/favicon.ico'],
+        'service-worker-url': '{$urls.base_url}upup.sw.min.js'
       });
     </script>
 
