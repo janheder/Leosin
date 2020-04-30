@@ -14,7 +14,7 @@
     "gulp-sass": "^3.2.1",
     "gulp-sourcemaps": "^1.12.1",
     "gulp-uglify": "^3.0.1",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "pug": "^2.0.0-rc.4",
     "pump": "^2.0.1",
     "siema": "^1.5.1",
