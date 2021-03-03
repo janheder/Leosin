@@ -15,7 +15,7 @@
     "gulp-sourcemaps": "^1.12.1",
     "gulp-uglify": "^3.0.1",
     "jquery": "^3.3.1",
-    "pug": "^2.0.0-rc.4",
+    "pug": "^3.0.1",
     "pump": "^2.0.1",
     "siema": "^1.5.1",
     "vanilla-lazyload": "^8.15.1"
